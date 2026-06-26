@@ -128,6 +128,24 @@ External Profile Click
 
 Each event includes the current locale and a target identifier. Supabase persistence is handled by `/api/analytics/events`, writes to `portfolio_analytics_events`, and was validated in production after configuring Supabase environment variables in Vercel.
 
+## Admin Analytics Dashboard
+
+The portfolio includes an initial read-only admin analytics dashboard.
+
+Admin dashboard route:
+
+```txt
+/admin/analytics
+```
+
+It reads custom analytics events from Supabase server-side and can be protected with Basic Auth through environment variables.
+
+Admin dashboard documentation:
+
+```txt
+docs/21-admin-analytics-dashboard-foundation.md
+```
+
 ## Initial Projects
 
 - TAMIAS

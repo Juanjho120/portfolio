@@ -196,7 +196,19 @@ Status: Completed
 - Show latest events.
 - Show metrics by locale.
 
-Status: Pending
+Status: In Progress
+
+## Phase 8A - Admin Analytics Dashboard Foundation
+
+- Create `/admin/analytics` as a read-only dashboard route.
+- Read recent custom analytics events from Supabase server-side.
+- Show initial metric cards for total events, project clicks, CV downloads and top target.
+- Show event breakdowns by type, locale and target.
+- Show a latest-events table.
+- Add optional Basic Auth middleware for `/admin/*` routes.
+- Keep the Supabase service role key server-only.
+
+Status: Completed
 
 ## Phase 9 - SEO and Polish
 
