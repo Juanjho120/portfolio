@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Juan Tzun Portfolio
 
-## Getting Started
+Professional portfolio for [juantzun.dev](https://juantzun.dev).
 
-First, run the development server:
+This project is the central entry point for my software engineering work. It presents selected projects as product-like case studies with live demos, technical stacks, architecture decisions, and future analytics.
+
+## Tech Stack
+
+- Next.js
+- TypeScript
+- Tailwind CSS
+- Vercel
+- Supabase for custom analytics later
+- Vercel Analytics for general metrics later
+
+## Main Goal
+
+Showcase full-stack projects focused on:
+
+- Java and Spring Boot backends
+- Angular and React frontends
+- PostgreSQL data modeling and performance
+- Docker-based deployments
+- AI features with RAG, OpenAI, Spring AI, Chroma and MCP
+- Real operational use cases
+
+## Initial Projects
+
+- TAMIAS
+- KnowledgeHub AI
+- Election Analytics Platform
+- DevFlow
+- MCP Agent Marketplace
+- SQL Performance Lab
+- Proteus 2.0
+
+## Local Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open the app at:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```txt
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Useful Scripts
 
-## Learn More
+```bash
+npm run dev
+npm run build
+npm run start
+npm run lint
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Documentation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Project documentation lives in `/docs`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Recommended reading order:
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. `docs/00-project-context.md`
+2. `docs/01-roadmap.md`
+3. `docs/02-architecture.md`
+4. `docs/03-projects-catalog.md`
+5. `docs/04-deployment-and-domains.md`
+6. `docs/05-analytics-plan.md`
+7. `docs/06-landing-page-mvp.md`
