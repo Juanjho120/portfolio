@@ -26,9 +26,19 @@ DNS provider:
 Cloudflare
 ```
 
+## Production Status
+
+```txt
+Status: Deployed
+Production branch: main
+Primary domain: https://juantzun.dev
+WWW domain: https://www.juantzun.dev
+Rollback: Vercel deployment history
+```
+
 ## Deployment Strategy
 
-The portfolio is a Next.js application deployed from GitHub to Vercel.
+The portfolio is a Next.js application deployed from GitHub to Vercel. Phase 6 completed the first production deployment and established `main` as the production branch.
 
 ```txt
 GitHub main branch
@@ -110,6 +120,8 @@ proteus.juantzun.dev
 Each subdomain will be configured later based on where that project is hosted.
 
 ## Post-Deployment Validation
+
+Phase 6 deployment validation should be kept as the production smoke-test checklist after every deployment.
 
 After deployment, validate:
 

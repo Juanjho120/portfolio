@@ -74,7 +74,13 @@ The background uses CSS animations, SVG paths, responsive chip positioning, PCB-
 
 ## Deployment
 
-The portfolio is prepared to deploy on Vercel from the `main` branch.
+The portfolio is deployed on Vercel from the `main` branch.
+
+Deployment status:
+
+```txt
+Completed
+```
 
 Main production domain:
 

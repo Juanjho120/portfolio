@@ -4,7 +4,7 @@
 
 Deploy the portfolio to Vercel and connect the production domain `juantzun.dev` through Cloudflare DNS.
 
-This phase focuses only on production deployment readiness. Analytics, SEO expansion, Open Graph image generation, sitemap, and robots.txt are intentionally left for later phases.
+Phase 6 is now completed. The portfolio is deployed from the GitHub `main` branch through Vercel. Analytics, SEO expansion, Open Graph image generation, sitemap, and robots.txt remain intentionally left for later phases.
 
 ## Current Deployment Decisions
 
@@ -18,9 +18,19 @@ Default locale: /en
 Root behavior: / redirects to /en
 ```
 
+## Deployment Result
+
+```txt
+Status: Completed
+Production deployment: Vercel
+Primary production URL: https://juantzun.dev
+WWW URL: https://www.juantzun.dev
+Production branch: main
+```
+
 ## Preflight Checklist
 
-Run locally before connecting or redeploying production:
+Run locally before redeploying production:
 
 ```bash
 npm run lint
@@ -39,6 +49,8 @@ latest commit is pushed to GitHub main
 
 ## Vercel Import Steps
 
+These steps were used for the initial Phase 6 deployment and can be reused if the Vercel project needs to be recreated.
+
 1. Open Vercel.
 2. Import the GitHub repository `Juanjho120/portfolio`.
 3. Select the Next.js framework preset.
@@ -51,7 +63,7 @@ latest commit is pushed to GitHub main
 
 ## Initial Vercel Smoke Test
 
-Before adding the custom domain, validate the temporary Vercel URL:
+For future deployment troubleshooting, validate the temporary Vercel URL before changing domain settings:
 
 ```txt
 / redirects to /en
@@ -66,6 +78,8 @@ mobile view is usable
 ```
 
 ## Custom Domain Steps
+
+These steps were completed during Phase 6 and should be used again only when changing or recreating the domain setup.
 
 1. Add `juantzun.dev` in the Vercel project domain settings.
 2. Add `www.juantzun.dev` in the Vercel project domain settings.
@@ -141,7 +155,7 @@ If production breaks after a deployment:
 
 ## Phase Completion Criteria
 
-Phase 6 is complete when:
+Phase 6 was considered complete when:
 
 ```txt
 Vercel project is connected to GitHub
