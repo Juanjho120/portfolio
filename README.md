@@ -97,16 +97,27 @@ docs/16-deployment-runbook.md
 
 ## Analytics
 
-The portfolio uses Vercel Analytics for general traffic metrics.
+The portfolio uses Vercel Analytics for general traffic metrics and a custom event tracking foundation for portfolio interactions.
 
 It is implemented with:
 
 ```txt
 @vercel/analytics
 app/layout.tsx
+components/TrackedLink.tsx
 ```
 
-Custom project click tracking, CV download tracking, external link tracking and Supabase persistence are planned for the next analytics phases.
+Currently tracked custom interactions:
+
+```txt
+Project Demo Click
+Project GitHub Click
+CV Download Click
+External Contact Click
+External Profile Click
+```
+
+Each event includes the current locale and a target identifier. Supabase persistence is planned for the next analytics phase.
 
 ## Initial Projects
 
@@ -170,3 +181,4 @@ Recommended reading order:
 16. `docs/15-pcb-lighting-and-chip-visibility.md`
 17. `docs/16-deployment-runbook.md`
 18. `docs/17-vercel-analytics-foundation.md`
+19. `docs/18-custom-event-tracking-foundation.md`

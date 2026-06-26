@@ -1,5 +1,6 @@
 import { ProjectCard } from "@/components/ProjectCard";
 import type { Project, ProjectSlug, ProjectStatus } from "@/data/projects";
+import type { Locale } from "@/i18n/config";
 
 type ProjectGridProps = {
   projects: Project[];
@@ -9,6 +10,7 @@ type ProjectGridProps = {
     title: string;
     description: string;
   };
+  locale: Locale;
   cardLabels: {
     liveDemo: string;
     github: string;
@@ -17,7 +19,7 @@ type ProjectGridProps = {
   };
 };
 
-export function ProjectGrid({ projects, projectTexts, copy, cardLabels }: ProjectGridProps) {
+export function ProjectGrid({ projects, projectTexts, copy, cardLabels, locale }: ProjectGridProps) {
   return (
     <section id="projects" className="mx-auto w-full max-w-6xl px-6 py-20">
       <div className="max-w-3xl">
@@ -40,6 +42,7 @@ export function ProjectGrid({ projects, projectTexts, copy, cardLabels }: Projec
             projectText={projectTexts[project.slug]}
             labels={cardLabels}
             index={index}
+            locale={locale}
           />
         ))}
       </div>

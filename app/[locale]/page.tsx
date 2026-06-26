@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { ProjectGrid } from "@/components/ProjectGrid";
+import { TrackedLink } from "@/components/TrackedLink";
 import { getHeroStatIcon } from "@/data/hero-stat-icons";
 import { projects } from "@/data/projects";
 import { isLocale } from "@/i18n/config";
@@ -69,20 +70,24 @@ export default async function LocaleHome({ params }: LocalePageProps) {
               >
                 {dictionary.hero.actions.projects}
               </a>
-              <a
+              <TrackedLink
                 href="/cv/Juan_Tzun_CV.pdf"
                 className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-800 shadow-sm shadow-slate-950/5 transition hover:-translate-y-0.5 hover:border-slate-400 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
                 target="_blank"
                 rel="noreferrer"
+                trackingEvent="CV Download Click"
+                trackingProperties={{ locale, target: "hero" }}
               >
                 {dictionary.hero.actions.cv}
-              </a>
-              <a
+              </TrackedLink>
+              <TrackedLink
                 href="mailto:juan.jose120@hotmail.com"
                 className="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-slate-700 transition hover:text-slate-950 dark:text-slate-300 dark:hover:text-white"
+                trackingEvent="External Contact Click"
+                trackingProperties={{ locale, target: "email:hero" }}
               >
                 {dictionary.hero.actions.contact}
-              </a>
+              </TrackedLink>
             </div>
 
             <div className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
@@ -126,10 +131,11 @@ export default async function LocaleHome({ params }: LocalePageProps) {
           projectTexts={dictionary.projects}
           copy={dictionary.projectGrid}
           cardLabels={dictionary.projectCards}
+          locale={locale}
         />
       </main>
 
-      <Footer labels={dictionary.footer} />
+      <Footer labels={dictionary.footer} locale={locale} />
     </>
   );
 }

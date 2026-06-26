@@ -1,5 +1,7 @@
+import { TrackedLink } from "@/components/TrackedLink";
 import { getTechIcon } from "@/data/tech-icons";
 import type { Project, ProjectStatus } from "@/data/projects";
+import type { Locale } from "@/i18n/config";
 
 type ProjectCardLabels = {
   liveDemo: string;
@@ -19,6 +21,7 @@ type ProjectCardProps = {
   projectText: ProjectText;
   labels: ProjectCardLabels;
   index: number;
+  locale: Locale;
 };
 
 const statusBadgeStyles: Record<ProjectStatus, string> = {
@@ -30,15 +33,17 @@ const statusBadgeStyles: Record<ProjectStatus, string> = {
     "border-sky-200 bg-sky-50 text-sky-700 shadow-sky-950/5 dark:border-sky-700/70 dark:bg-sky-950/80 dark:text-sky-200",
 };
 
-export function ProjectCard({ project, projectText, labels, index }: ProjectCardProps) {
+export function ProjectCard({ project, projectText, labels, index, locale }: ProjectCardProps) {
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-800 dark:bg-slate-900/70">
-      <a
+      <TrackedLink
         href={project.liveDemoUrl}
         target="_blank"
         rel="noopener noreferrer"
         className="relative block overflow-hidden bg-slate-950 text-white"
         aria-label={`${labels.openDemoAriaPrefix} ${project.title}`}
+        trackingEvent="Project Demo Click"
+        trackingProperties={{ locale, target: `${project.slug}:image` }}
       >
         <div className="aspect-[16/10] overflow-hidden">
           <img
@@ -63,7 +68,7 @@ export function ProjectCard({ project, projectText, labels, index }: ProjectCard
           </span>
           <h3 className="mt-3 text-2xl font-bold tracking-tight">{project.title}</h3>
         </div>
-      </a>
+      </TrackedLink>
 
       <div className="flex flex-1 flex-col p-6">
         <p className="text-sm leading-6 text-slate-600 dark:text-slate-300">{projectText.description}</p>
@@ -102,24 +107,28 @@ export function ProjectCard({ project, projectText, labels, index }: ProjectCard
         </ul>
 
         <div className="mt-6 flex flex-wrap gap-3 pt-2">
-          <a
+          <TrackedLink
             href={project.liveDemoUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-full bg-slate-950 px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-800 dark:bg-white dark:text-slate-950 dark:hover:bg-slate-200"
+            trackingEvent="Project Demo Click"
+            trackingProperties={{ locale, target: `${project.slug}:button` }}
           >
             {labels.liveDemo}
-          </a>
+          </TrackedLink>
 
           {project.githubUrl ? (
-            <a
+            <TrackedLink
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-slate-950 hover:text-slate-950 dark:border-slate-700 dark:text-slate-200 dark:hover:border-white dark:hover:text-white"
+              trackingEvent="Project GitHub Click"
+              trackingProperties={{ locale, target: project.slug }}
             >
               {labels.github}
-            </a>
+            </TrackedLink>
           ) : null}
         </div>
       </div>

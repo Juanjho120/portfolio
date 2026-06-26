@@ -8,20 +8,24 @@ Use Vercel Analytics for:
 
 - Page views
 - Visitors
-- Performance insights
+- General traffic metrics
 
 ## Custom Events
 
-Use Supabase to track custom portfolio events.
+Use Vercel custom events first for lightweight interaction tracking. Supabase persistence will be added later for long-term custom reporting and the private analytics dashboard.
 
-Initial events:
+Initial Vercel custom events:
 
-- `portfolio_visit`
-- `project_click`
-- `cv_download`
-- `github_click`
-- `linkedin_click`
-- `email_click`
+- `Project Demo Click`
+- `Project GitHub Click`
+- `CV Download Click`
+- `External Contact Click`
+- `External Profile Click`
+
+Each event should include:
+
+- `locale`
+- `target`
 
 ## Supabase Table
 
@@ -45,23 +49,19 @@ created_at timestamptz not null default now()
 
 ## Project Click Event
 
-When a user clicks a project card, save:
+When a user clicks a project card image or live demo button, track:
 
-- Event type: `project_click`
-- Project slug
-- Destination URL
-- Current locale when available
-- Timestamp
-- User agent
+- Event name: `Project Demo Click`
+- `locale`
+- `target`: project slug plus source, for example `tamias:image` or `tamias:button`
 
 ## CV Download Event
 
-When a user clicks the CV link, save:
+When a user clicks the CV link, track:
 
-- Event type: `cv_download`
-- Current locale when available
-- Timestamp
-- User agent
+- Event name: `CV Download Click`
+- `locale`
+- `target`: source area, for example `hero` or `footer`
 
 ## Future Admin Dashboard
 

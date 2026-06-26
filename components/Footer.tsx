@@ -1,4 +1,8 @@
+import { TrackedLink } from "@/components/TrackedLink";
+import type { Locale } from "@/i18n/config";
+
 type FooterProps = {
+  locale: Locale;
   labels: {
     name: string;
     tagline: string;
@@ -8,7 +12,7 @@ type FooterProps = {
   };
 };
 
-export function Footer({ labels }: FooterProps) {
+export function Footer({ labels, locale }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -20,20 +24,32 @@ export function Footer({ labels }: FooterProps) {
         </div>
 
         <div className="flex flex-wrap gap-4">
-          <a className="transition hover:text-slate-950 dark:hover:text-white" href="mailto:juan.jose120@hotmail.com">
+          <TrackedLink
+            className="transition hover:text-slate-950 dark:hover:text-white"
+            href="mailto:juan.jose120@hotmail.com"
+            trackingEvent="External Contact Click"
+            trackingProperties={{ locale, target: "email:footer" }}
+          >
             {labels.email}
-          </a>
-          <a
+          </TrackedLink>
+          <TrackedLink
             className="transition hover:text-slate-950 dark:hover:text-white"
             href="https://github.com/Juanjho120"
             target="_blank"
             rel="noopener noreferrer"
+            trackingEvent="External Profile Click"
+            trackingProperties={{ locale, target: "github:footer" }}
           >
             {labels.github}
-          </a>
-          <a className="transition hover:text-slate-950 dark:hover:text-white" href="/cv/Juan_Tzun_CV.pdf">
+          </TrackedLink>
+          <TrackedLink
+            className="transition hover:text-slate-950 dark:hover:text-white"
+            href="/cv/Juan_Tzun_CV.pdf"
+            trackingEvent="CV Download Click"
+            trackingProperties={{ locale, target: "footer" }}
+          >
             {labels.cv}
-          </a>
+          </TrackedLink>
         </div>
 
         <p className="text-slate-500 dark:text-slate-400">© {currentYear} juantzun.dev</p>
