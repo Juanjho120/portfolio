@@ -4,6 +4,10 @@ export type TechIcon = {
 };
 
 export const techIcons: Record<string, TechIcon> = {
+  Java: {
+    src: "/images/tech/java.svg",
+    label: "Java",
+  },
   Angular: {
     src: "/images/tech/angular.svg",
     label: "Angular",
@@ -67,6 +71,14 @@ export const techIcons: Record<string, TechIcon> = {
   MCP: {
     src: "/images/tech/mcp.svg",
     label: "MCP",
+  },
+  AI: {
+    src: "/images/tech/ai.svg",
+    label: "AI",
+  },
+  IA: {
+    src: "/images/tech/ai.svg",
+    label: "IA",
   },
 };
 

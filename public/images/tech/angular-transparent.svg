@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Angular</title>
+  <desc id="desc">Angular logo mark without background.</desc>
+  <path fill="#DD0031" d="M32 4 7.6 12.7l3.8 32.7L32 56l20.6-10.6 3.8-32.7L32 4Z"/>
+  <path fill="#C3002F" d="M32 4v52l20.6-10.6 3.8-32.7L32 4Z"/>
+  <path fill="#FFFFFF" d="m32 10.9-15.2 34h5.7l3.1-7.6h12.7l3.1 7.6h5.7L32 10.9Zm4.3 21.7h-8.6L32 22.2l4.3 10.4Z"/>
+</svg>
