@@ -26,7 +26,7 @@ export const projects: Project[] = [
     stack: ["Angular", "Spring Boot", "PostgreSQL", "AWS S3", "Spring AI", "Chroma", "OpenAI", "Docker"],
     liveDemoUrl: "https://tamias.juantzun.dev",
     status: "inDevelopment",
-    imageSrc: "/images/projects/tamias.svg",
+    imageSrc: "/images/projects/tamias.png",
   },
   {
     slug: "knowledgehub",
