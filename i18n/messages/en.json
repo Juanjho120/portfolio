@@ -61,31 +61,66 @@
   "projects": {
     "tamias": {
       "description": "Operational management platform for small rental businesses: reservations, maintenance, purchases, inventory, documents, and an AI assistant.",
-      "highlights": ["Rental operations", "AI with RAG", "Private files in S3"]
+      "highlights": [
+        "Rental operations",
+        "AI with RAG",
+        "Private files in S3"
+      ],
+      "imageAlt": "Representative dashboard preview for TAMIAS."
     },
     "knowledgehub": {
       "description": "AI-powered document management system with permissions, semantic search, RAG, and a chatbot over business documents.",
-      "highlights": ["Document management", "Permissions", "Chatbot over files"]
+      "highlights": [
+        "Document management",
+        "Permissions",
+        "Chatbot over files"
+      ],
+      "imageAlt": "Representative document and AI search preview for KnowledgeHub AI."
     },
     "elections": {
       "description": "Platform for processing and visualizing massive electoral datasets with batch pipelines, dashboards, and monitoring.",
-      "highlights": ["Massive processing", "Dashboards", "Observability"]
+      "highlights": [
+        "Massive processing",
+        "Dashboards",
+        "Observability"
+      ],
+      "imageAlt": "Representative electoral data analytics preview."
     },
     "devflow": {
       "description": "Platform for visibility into deployments, pipelines, errors, incidents, and engineering team metrics.",
-      "highlights": ["Deploy visibility", "Incidents", "Technical metrics"]
+      "highlights": [
+        "Deploy visibility",
+        "Incidents",
+        "Technical metrics"
+      ],
+      "imageAlt": "Representative deployment and incident visibility preview for DevFlow."
     },
     "mcp": {
       "description": "AI agents connected to real tools through MCP, designed to automate technical and operational workflows.",
-      "highlights": ["Real MCP", "AI agents", "Connected tools"]
+      "highlights": [
+        "Real MCP",
+        "AI agents",
+        "Connected tools"
+      ],
+      "imageAlt": "Representative AI agents and tool connections preview for MCP Agent Marketplace."
     },
     "performancelab": {
       "description": "Laboratory for SQL query analysis, execution plans, index recommendations, and performance comparison.",
-      "highlights": ["Query analysis", "Indexes", "Performance tuning"]
+      "highlights": [
+        "Query analysis",
+        "Indexes",
+        "Performance tuning"
+      ],
+      "imageAlt": "Representative SQL query performance analysis preview."
     },
     "proteus": {
       "description": "Modern ERP based on a real system: inventory, billing, credits, permissions, reports, auditing, and an AI assistant.",
-      "highlights": ["ERP", "Auditing", "AI assistant"]
+      "highlights": [
+        "ERP",
+        "Auditing",
+        "AI assistant"
+      ],
+      "imageAlt": "Representative ERP operations preview for Proteus 2.0."
     }
   },
   "footer": {

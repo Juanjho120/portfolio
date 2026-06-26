@@ -3,7 +3,7 @@ import type { Project, ProjectSlug, ProjectStatus } from "@/data/projects";
 
 type ProjectGridProps = {
   projects: Project[];
-  projectTexts: Record<ProjectSlug, { description: string; highlights: string[] }>;
+  projectTexts: Record<ProjectSlug, { description: string; highlights: string[]; imageAlt: string }>;
   copy: {
     eyebrow: string;
     title: string;

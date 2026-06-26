@@ -51,12 +51,14 @@ Status: Completed
 
 ## Phase 5 - Visual Assets and CV
 
-- Add final CV PDF.
-- Add real project screenshots or representative images.
-- Replace current visual placeholders when each project has a good image.
-- Consider adding a profile photo only if it improves the page.
+- Add the final CV PDF under `public/cv/Juan_Tzun_CV.pdf`.
+- Add representative project visuals under `public/images/projects`.
+- Render project visuals in each project card.
+- Keep project images clickable so they open each live demo.
+- Add translated image alt text for accessibility.
+- Document the visual asset naming and replacement strategy.
 
-Status: Pending
+Status: Completed
 
 ## Phase 6 - Deployment
 

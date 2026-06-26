@@ -61,31 +61,66 @@
   "projects": {
     "tamias": {
       "description": "Plataforma de administración operativa para alojamientos pequeños: reservas, mantenimiento, compras, inventario, documentos y asistente IA.",
-      "highlights": ["Operación de alojamientos", "IA con RAG", "Archivos privados en S3"]
+      "highlights": [
+        "Operación de alojamientos",
+        "IA con RAG",
+        "Archivos privados en S3"
+      ],
+      "imageAlt": "Vista representativa del dashboard de TAMIAS."
     },
     "knowledgehub": {
       "description": "Sistema documental con IA, permisos, búsqueda semántica, RAG y chatbot sobre documentos empresariales.",
-      "highlights": ["Gestión documental", "Permisos", "Chatbot sobre archivos"]
+      "highlights": [
+        "Gestión documental",
+        "Permisos",
+        "Chatbot sobre archivos"
+      ],
+      "imageAlt": "Vista representativa de documentos y búsqueda con IA para KnowledgeHub AI."
     },
     "elections": {
       "description": "Plataforma para procesar y visualizar datos electorales masivos con pipelines batch, dashboards y monitoreo.",
-      "highlights": ["Procesamiento masivo", "Dashboards", "Observabilidad"]
+      "highlights": [
+        "Procesamiento masivo",
+        "Dashboards",
+        "Observabilidad"
+      ],
+      "imageAlt": "Vista representativa de analítica de datos electorales."
     },
     "devflow": {
       "description": "Plataforma para visibilidad de deploys, pipelines, errores, incidentes y métricas de equipos de desarrollo.",
-      "highlights": ["Deploy visibility", "Incidentes", "Métricas técnicas"]
+      "highlights": [
+        "Deploy visibility",
+        "Incidentes",
+        "Métricas técnicas"
+      ],
+      "imageAlt": "Vista representativa de deploys, incidentes y visibilidad técnica en DevFlow."
     },
     "mcp": {
       "description": "Agentes IA conectados a herramientas reales mediante MCP, pensados para automatizar flujos técnicos y operativos.",
-      "highlights": ["MCP real", "Agentes IA", "Herramientas conectadas"]
+      "highlights": [
+        "MCP real",
+        "Agentes IA",
+        "Herramientas conectadas"
+      ],
+      "imageAlt": "Vista representativa de agentes IA y conexiones con herramientas para MCP Agent Marketplace."
     },
     "performancelab": {
       "description": "Laboratorio para análisis de queries SQL, planes de ejecución, recomendaciones de índices y comparación de rendimiento.",
-      "highlights": ["Query analysis", "Índices", "Performance tuning"]
+      "highlights": [
+        "Query analysis",
+        "Índices",
+        "Performance tuning"
+      ],
+      "imageAlt": "Vista representativa de análisis de rendimiento de queries SQL."
     },
     "proteus": {
       "description": "ERP moderno basado en un sistema real: inventario, facturación, créditos, permisos, reportes, auditoría y asistente IA.",
-      "highlights": ["ERP", "Auditoría", "AI assistant"]
+      "highlights": [
+        "ERP",
+        "Auditoría",
+        "AI assistant"
+      ],
+      "imageAlt": "Vista representativa de operaciones ERP para Proteus 2.0."
     }
   },
   "footer": {

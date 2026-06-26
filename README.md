@@ -46,6 +46,12 @@ i18n/messages/es.json
 i18n/messages/en.json
 ```
 
+## Visual Assets
+
+Project visuals are stored in `public/images/projects`.
+
+The CV is available at `public/cv/Juan_Tzun_CV.pdf` and served as `/cv/Juan_Tzun_CV.pdf`.
+
 ## Initial Projects
 
 - TAMIAS
@@ -98,3 +104,4 @@ Recommended reading order:
 6. `docs/05-analytics-plan.md`
 7. `docs/06-landing-page-mvp.md`
 8. `docs/07-i18n-foundation.md`
+9. `docs/08-visual-assets-and-cv.md`

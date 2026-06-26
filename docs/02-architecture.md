@@ -111,6 +111,28 @@ portfolio/
 
 Some future folders, such as `lib`, `app/api`, and `app/admin`, are documented as target structure and will be created when those phases are implemented.
 
+## Visual Asset Strategy
+
+Project visuals live in:
+
+```txt
+public/images/projects/
+```
+
+The current project card ratio is `16:10`. Representative SVG visuals are used until real screenshots are ready. Real screenshots can replace the existing files later, preferably as optimized `.webp` images.
+
+The CV lives in:
+
+```txt
+public/cv/Juan_Tzun_CV.pdf
+```
+
+The public URL remains stable:
+
+```txt
+/cv/Juan_Tzun_CV.pdf
+```
+
 ## Project Data Strategy
 
 Technical metadata lives in:
@@ -127,6 +149,7 @@ This includes:
 - Live demo URL
 - Optional GitHub URL
 - Internal status key
+- Project image path
 
 Translated copy lives in:
 
@@ -141,10 +164,11 @@ This includes:
 - Navigation labels
 - Project descriptions
 - Project highlights
+- Project image alt text
 - Status labels
 - Footer copy
 
-This keeps project URLs and stacks stable while allowing the visible copy to change by locale.
+This keeps project URLs, stacks, and asset paths stable while allowing the visible copy and accessibility text to change by locale.
 
 ## Design Principles
 

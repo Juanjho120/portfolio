@@ -16,6 +16,7 @@ export type Project = {
   liveDemoUrl: string;
   githubUrl?: string;
   status: ProjectStatus;
+  imageSrc: string;
 };
 
 export const projects: Project[] = [
@@ -25,6 +26,7 @@ export const projects: Project[] = [
     stack: ["Angular", "Spring Boot", "PostgreSQL", "AWS S3", "Spring AI", "Chroma", "OpenAI", "Docker"],
     liveDemoUrl: "https://tamias.juantzun.dev",
     status: "inDevelopment",
+    imageSrc: "/images/projects/tamias.svg",
   },
   {
     slug: "knowledgehub",
@@ -32,6 +34,7 @@ export const projects: Project[] = [
     stack: ["Angular", "Spring Boot", "PostgreSQL", "Docker", "Spring AI", "Ollama", "Chroma", "RAG", "OpenAI", "AWS S3"],
     liveDemoUrl: "https://knowledgehub.juantzun.dev",
     status: "planned",
+    imageSrc: "/images/projects/knowledgehub.svg",
   },
   {
     slug: "elections",
@@ -39,6 +42,7 @@ export const projects: Project[] = [
     stack: ["Spring Batch", "Spring Cloud", "PostgreSQL", "Angular", "Docker", "Datadog"],
     liveDemoUrl: "https://elections.juantzun.dev",
     status: "planned",
+    imageSrc: "/images/projects/elections.svg",
   },
   {
     slug: "devflow",
@@ -46,6 +50,7 @@ export const projects: Project[] = [
     stack: ["React", "Spring Boot", "PostgreSQL", "GitHub API", "Docker"],
     liveDemoUrl: "https://devflow.juantzun.dev",
     status: "planned",
+    imageSrc: "/images/projects/devflow.svg",
   },
   {
     slug: "mcp",
@@ -53,6 +58,7 @@ export const projects: Project[] = [
     stack: ["Spring AI", "OpenAI", "MCP", "Ollama", "Docker", "Angular"],
     liveDemoUrl: "https://mcp.juantzun.dev",
     status: "planned",
+    imageSrc: "/images/projects/mcp.svg",
   },
   {
     slug: "performancelab",
@@ -60,6 +66,7 @@ export const projects: Project[] = [
     stack: ["Spring Boot", "PostgreSQL", "OpenAI", "Angular"],
     liveDemoUrl: "https://performancelab.juantzun.dev",
     status: "planned",
+    imageSrc: "/images/projects/performancelab.svg",
   },
   {
     slug: "proteus",
@@ -67,5 +74,6 @@ export const projects: Project[] = [
     stack: ["Angular", "Spring Boot", "PostgreSQL", "Docker", "OpenAI"],
     liveDemoUrl: "https://proteus.juantzun.dev",
     status: "planned",
+    imageSrc: "/images/projects/proteus.svg",
   },
 ];

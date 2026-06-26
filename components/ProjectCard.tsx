@@ -10,6 +10,7 @@ type ProjectCardLabels = {
 type ProjectText = {
   description: string;
   highlights: string[];
+  imageAlt: string;
 };
 
 type ProjectCardProps = {
@@ -26,14 +27,25 @@ export function ProjectCard({ project, projectText, labels, index }: ProjectCard
         href={project.liveDemoUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="relative flex min-h-52 items-end overflow-hidden bg-slate-950 p-6 text-white"
+        className="relative block overflow-hidden bg-slate-950 text-white"
         aria-label={`${labels.openDemoAriaPrefix} ${project.title}`}
       >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(56,189,248,0.35),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(99,102,241,0.35),_transparent_35%)] transition duration-500 group-hover:scale-110" />
+        <div className="aspect-[16/10] overflow-hidden">
+          <img
+            src={project.imageSrc}
+            alt={projectText.imageAlt}
+            className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+            loading="lazy"
+          />
+        </div>
+
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/15 to-transparent" />
+
         <div className="absolute right-5 top-5 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-medium text-white/90 backdrop-blur">
           {labels.status[project.status]}
         </div>
-        <div className="relative">
+
+        <div className="absolute bottom-5 left-5 right-5">
           <span className="text-sm font-semibold uppercase tracking-[0.35em] text-sky-200">
             0{index + 1}
           </span>
