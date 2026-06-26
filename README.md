@@ -70,7 +70,7 @@ components/AnimatedPcbBackground.tsx
 data/pcb-background.ts
 ```
 
-The background uses CSS animations, SVG paths, responsive chip positioning, PCB-style vias, 45-degree routed traces, synchronized chip glow states, and respects `prefers-reduced-motion`.
+The background uses CSS animations, SVG paths, responsive chip positioning, PCB-style vias, audited 45-degree routed traces, synchronized chip glow states, and respects `prefers-reduced-motion`.
 
 ## Initial Projects
 

@@ -103,6 +103,17 @@ Status: Completed
 
 Status: Completed
 
+## Phase 5.5 - PCB Routing Geometry Correction
+
+- Audit the PCB geometry from the ZIP state.
+- Remove crossed traces and decorative T-junction routing.
+- Redraw traces with 45-degree chamfers.
+- Connect traces to chip edge pads instead of chip centers.
+- Render vias as PCB-style pads with ring/copper/drill-hole structure.
+- Improve chip glow timing against energy-pulse travel.
+
+Status: Completed
+
 ## Phase 6 - Deployment
 
 - Deploy portfolio to Vercel.

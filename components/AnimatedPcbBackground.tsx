@@ -31,6 +31,7 @@ export function AnimatedPcbBackground() {
               key={`desktop-base-${trace.id}`}
               className="pcb-trace pcb-trace--base"
               d={trace.d}
+              pathLength={100}
               style={cssVars({
                 "--pcb-trace-opacity": String(trace.opacity ?? 0.72),
               })}
@@ -44,6 +45,7 @@ export function AnimatedPcbBackground() {
               key={`desktop-energy-${trace.id}`}
               className="pcb-trace pcb-trace--energy"
               d={trace.d}
+              pathLength={100}
               style={cssVars({
                 "--pcb-trace-delay": `${trace.delay}s`,
                 "--pcb-trace-duration": `${trace.duration}s`,
@@ -54,13 +56,12 @@ export function AnimatedPcbBackground() {
 
         <g>
           {pcbNodes.map((node) => (
-            <circle
-              key={node.id}
-              className="pcb-node"
-              cx={node.x}
-              cy={node.y}
-              r={node.r ?? 3}
-            />
+            <g key={node.id} className="pcb-via" transform={`translate(${node.x} ${node.y})`}>
+              <circle className="pcb-via__halo" r={(node.r ?? 3) + 5.6} />
+              <circle className="pcb-via__ring" r={(node.r ?? 3) + 2.8} />
+              <circle className="pcb-via__copper" r={(node.r ?? 3) + 1.1} />
+              <circle className="pcb-via__hole" r={Math.max(1.4, (node.r ?? 3) * 0.48)} />
+            </g>
           ))}
         </g>
       </svg>
@@ -76,6 +77,7 @@ export function AnimatedPcbBackground() {
               key={`mobile-base-${trace.id}`}
               className="pcb-trace pcb-trace--base"
               d={trace.d}
+              pathLength={100}
               style={cssVars({
                 "--pcb-trace-opacity": String(trace.opacity ?? 0.68),
               })}
@@ -89,6 +91,7 @@ export function AnimatedPcbBackground() {
               key={`mobile-energy-${trace.id}`}
               className="pcb-trace pcb-trace--energy"
               d={trace.d}
+              pathLength={100}
               style={cssVars({
                 "--pcb-trace-delay": `${trace.delay}s`,
                 "--pcb-trace-duration": `${trace.duration}s`,
