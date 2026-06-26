@@ -195,8 +195,9 @@ Status: Completed
 - Show most clicked project.
 - Show latest events.
 - Show metrics by locale.
+- Protect admin routes with hardened Basic Auth middleware.
 
-Status: In Progress
+Status: Completed
 
 ## Phase 8A - Admin Analytics Dashboard Foundation
 
@@ -218,6 +219,18 @@ Status: Completed
 - Keep filter options generated from the Supabase event sample.
 - Expand the latest-events table to show the last 50 matching events.
 - Keep Supabase service role usage server-only.
+
+Status: Completed
+
+
+## Phase 8C - Admin Access Hardening
+
+- Harden Basic Auth middleware for `/admin/*` routes.
+- Enable Basic Auth by default in Vercel production when no explicit flag is set.
+- Return a safe 404 if production admin credentials are missing.
+- Add no-store, noindex, noframe and content-type protection headers to admin responses.
+- Avoid direct credential comparisons and handle malformed Basic Auth headers safely.
+- Mark the admin analytics dashboard phase as completed.
 
 Status: Completed
 

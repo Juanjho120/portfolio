@@ -13,6 +13,10 @@ import {
 export const metadata: Metadata = {
   title: "Admin Analytics | Juan Tzun Portfolio",
   description: "Private analytics dashboard for Juan Tzun Portfolio interactions.",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export const dynamic = "force-dynamic";
