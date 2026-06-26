@@ -10,11 +10,26 @@ import {
 
 type PcbCssProperties = CSSProperties & Record<`--${string}`, string>;
 
+const DESKTOP_VIEWBOX_WIDTH = 1200;
+const DESKTOP_VIEWBOX_HEIGHT = 800;
+
 function cssVars(values: Record<string, string>): PcbCssProperties {
   return values as PcbCssProperties;
 }
 
+function isNodeNearChipEntry(nodeX: number, nodeY: number) {
+  return pcbChips.some((chip) => {
+    const chipX = (chip.desktop.x / 100) * DESKTOP_VIEWBOX_WIDTH;
+    const chipY = (chip.desktop.y / 100) * DESKTOP_VIEWBOX_HEIGHT;
+    const exclusionRadius = chip.desktop.size / 2 + 12;
+
+    return Math.hypot(nodeX - chipX, nodeY - chipY) <= exclusionRadius;
+  });
+}
+
 export function AnimatedPcbBackground() {
+  const visiblePcbNodes = pcbNodes.filter((node) => !isNodeNearChipEntry(node.x, node.y));
+
   return (
     <div aria-hidden="true" className="pcb-background">
       <div className="pcb-background__grid" />
@@ -55,7 +70,7 @@ export function AnimatedPcbBackground() {
         </g>
 
         <g>
-          {pcbNodes.map((node) => (
+          {visiblePcbNodes.map((node) => (
             <g key={node.id} className="pcb-via" transform={`translate(${node.x} ${node.y})`}>
               <circle className="pcb-via__halo" r={(node.r ?? 3) + 5.6} />
               <circle className="pcb-via__ring" r={(node.r ?? 3) + 2.8} />
@@ -105,7 +120,7 @@ export function AnimatedPcbBackground() {
         {pcbChips.map((chip) => (
           <div
             key={chip.id}
-            className={`pcb-chip ${
+            className={`pcb-chip pcb-chip--${chip.id} ${
               chip.mobile ? "pcb-chip--mobile-visible" : "pcb-chip--desktop-only"
             }`}
             style={cssVars({
@@ -126,7 +141,7 @@ export function AnimatedPcbBackground() {
                 alt=""
                 width={56}
                 height={56}
-                className="pcb-chip__icon"
+                className={`pcb-chip__icon ${chip.id === "ai" ? "pcb-chip__icon--ai" : ""}`.trim()}
               />
               <span className="pcb-chip__label">{chip.label}</span>
             </div>

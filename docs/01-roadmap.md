@@ -114,6 +114,17 @@ Status: Completed
 
 Status: Completed
 
+
+## Phase 5.6 - PCB Lighting and Chip Visibility
+
+- Make chip illumination more explicit when energy arrives.
+- Reduce overall portfolio background brightness.
+- Increase the AI chip logo size to match the other chips.
+- Remove PCB via holes from chip-entry pins so traces enter chips cleanly.
+- Keep the corrected routing geometry from Phase 5.5 intact.
+
+Status: Completed
+
 ## Phase 6 - Deployment
 
 - Deploy portfolio to Vercel.
