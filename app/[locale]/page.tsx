@@ -98,15 +98,13 @@ export default async function LocaleHome({ params }: LocalePageProps) {
                   >
                     <div className="flex items-center gap-3">
                       {statIcon ? (
-                        <span className="flex size-9 shrink-0 items-center justify-center rounded-2xl bg-white/55 ring-1 ring-black/5 dark:bg-white/10 dark:ring-white/10">
-                          <Image
-                            src={statIcon.src}
-                            alt={statIcon.label}
-                            width={22}
-                            height={22}
-                            className="h-5 w-5 object-contain"
-                          />
-                        </span>
+                        <Image
+                          src={statIcon.src}
+                          alt={statIcon.label}
+                          width={32}
+                          height={32}
+                          className="h-8 w-8 shrink-0 object-contain"
+                        />
                       ) : null}
 
                       <div>
