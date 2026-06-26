@@ -1,1 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="8" fill="#0f766e"/><path d="M9 6.5h10l4 4V25.5H9V6.5Z" fill="#fff"/><path d="M19 6.5v4h4" fill="#ccfbf1"/><path d="M12 14h8M12 17h8M12 20h5" stroke="#0f766e" stroke-width="1.5" stroke-linecap="round"/><circle cx="21.5" cy="21.2" r="3.4" fill="#0f766e"/><path d="m24 23.7 2.4 2.4" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/><circle cx="21.5" cy="21.2" r="1.4" fill="#fff"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">RAG logo</title>
+  <desc id="desc">Retrieval-Augmented Generation chip icon.</desc>
+  <g fill="none" stroke="#3624b7" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="64" cy="64" r="24"/>
+    <path d="M64 6v22M64 100v22M6 64h22M100 64h22M23 23l15 15M90 90l15 15M105 23 90 38M23 105l15-15"/>
+    <circle cx="64" cy="6" r="4.5" fill="#fff"/>
+    <circle cx="64" cy="122" r="4.5" fill="#fff"/>
+    <circle cx="6" cy="64" r="4.5" fill="#fff"/>
+    <circle cx="122" cy="64" r="4.5" fill="#fff"/>
+    <circle cx="23" cy="23" r="4.5" fill="#fff"/>
+    <circle cx="105" cy="105" r="4.5" fill="#fff"/>
+    <circle cx="105" cy="23" r="4.5" fill="#fff"/>
+    <circle cx="23" cy="105" r="4.5" fill="#fff"/>
+  </g>
+  <rect x="38" y="50" width="52" height="28" rx="14" fill="#3624b7"/>
+  <text x="64" y="69.5" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#fff">RAG</text>
+</svg>
