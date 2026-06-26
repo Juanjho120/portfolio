@@ -70,6 +70,18 @@ Status: Completed
 
 Status: Completed
 
+## Phase 5.2 - Animated PCB Background
+
+- Add a global animated PCB-style background.
+- Use responsive desktop and mobile PCB layouts.
+- Represent key technologies as microchip components.
+- Animate energy pulses through PCB paths.
+- Illuminate chips when the energy reaches them.
+- Respect `prefers-reduced-motion` for accessibility.
+- Keep the background decorative with `aria-hidden` and `pointer-events: none`.
+
+Status: Completed
+
 ## Phase 6 - Deployment
 
 - Deploy portfolio to Vercel.

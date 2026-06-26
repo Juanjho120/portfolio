@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+
+import { AnimatedPcbBackground } from "@/components/AnimatedPcbBackground";
+
 import "./globals.css";
 
 const geistSans = Geist({
@@ -24,8 +27,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`${geistSans.variable} ${geistMono.variable} h-full scroll-smooth`}>
-      <body className="flex min-h-full flex-col">{children}</body>
+    <html lang="en">
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <AnimatedPcbBackground />
+
+        <div className="relative z-10 min-h-screen">{children}</div>
+      </body>
     </html>
   );
 }

@@ -50,7 +50,27 @@ i18n/messages/en.json
 
 Project visuals are stored in `public/images/projects`.
 
+Technology icons are stored in:
+
+```txt
+public/images/tech
+public/images/hero-stats
+```
+
 The CV is available at `public/cv/Juan_Tzun_CV.pdf` and served as `/cv/Juan_Tzun_CV.pdf`.
+
+## Animated Background
+
+The portfolio includes a decorative animated PCB-style background.
+
+It is implemented with:
+
+```txt
+components/AnimatedPcbBackground.tsx
+data/pcb-background.ts
+```
+
+The background uses CSS animations, SVG paths, responsive chip positioning, and respects `prefers-reduced-motion`.
 
 ## Initial Projects
 
@@ -105,3 +125,6 @@ Recommended reading order:
 7. `docs/06-landing-page-mvp.md`
 8. `docs/07-i18n-foundation.md`
 9. `docs/08-visual-assets-and-cv.md`
+10. `docs/09-tech-stack-badges.md`
+11. `docs/10-hero-stat-icons.md`
+12. `docs/11-animated-pcb-background.md`
