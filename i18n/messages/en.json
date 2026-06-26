@@ -38,6 +38,10 @@
         "label": "productive frontends"
       },
       {
+        "value": "React",
+        "label": "reactive frontends"
+      },
+      {
         "value": "AI",
         "label": "RAG and agents"
       }

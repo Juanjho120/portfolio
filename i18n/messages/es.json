@@ -38,6 +38,10 @@
         "label": "frontends productivos"
       },
       {
+        "value": "React",
+        "label": "frontends reactivos"
+      },
+      {
         "value": "IA",
         "label": "RAG y agentes"
       }

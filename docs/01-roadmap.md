@@ -60,6 +60,16 @@ Status: Completed
 
 Status: Completed
 
+## Phase 5.1 - Tech Stack Badges
+
+- Add local SVG icons for the technologies used in the project cards.
+- Add a centralized technology icon mapping.
+- Render technology badges with icon plus technology name.
+- Keep badges readable in light and dark mode.
+- Keep unknown technologies working as text-only badges.
+
+Status: Completed
+
 ## Phase 6 - Deployment
 
 - Deploy portfolio to Vercel.
