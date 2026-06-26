@@ -165,15 +165,17 @@ Status: Completed
 - Track external profile clicks.
 - Include locale and event source in each custom event.
 
-Status: Pending
+Status: Completed
 
 ## Phase 7C - Supabase Analytics Persistence
 
 - Define the custom analytics event table.
 - Configure Supabase environment variables.
 - Persist custom events through a server-side endpoint.
+- Keep persistence feature-flagged so Vercel Analytics remains safe while Supabase is configured.
+- Sanitize event payloads and avoid storing IP addresses or fingerprinting data.
 
-Status: Pending
+Status: Completed
 
 ## Phase 8 - Admin Analytics Dashboard
 

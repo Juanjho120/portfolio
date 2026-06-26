@@ -10,7 +10,7 @@ This project is the central entry point for my software engineering work. It pre
 - TypeScript
 - Tailwind CSS
 - Vercel
-- Supabase for custom analytics later
+- Supabase for custom analytics persistence
 - Vercel Analytics for general metrics
 
 ## Main Goal
@@ -97,7 +97,7 @@ docs/16-deployment-runbook.md
 
 ## Analytics
 
-The portfolio uses Vercel Analytics for general traffic metrics and a custom event tracking foundation for portfolio interactions.
+The portfolio uses Vercel Analytics for general traffic metrics and a Supabase-ready custom event persistence layer for portfolio interactions.
 
 It is implemented with:
 
@@ -105,6 +105,9 @@ It is implemented with:
 @vercel/analytics
 app/layout.tsx
 components/TrackedLink.tsx
+lib/analytics.ts
+lib/supabase-analytics.ts
+app/api/analytics/events/route.ts
 ```
 
 Currently tracked custom interactions:
@@ -117,7 +120,7 @@ External Contact Click
 External Profile Click
 ```
 
-Each event includes the current locale and a target identifier. Supabase persistence is planned for the next analytics phase.
+Each event includes the current locale and a target identifier. Supabase persistence is handled by `/api/analytics/events` and remains feature-flagged through environment variables until production Supabase credentials are configured.
 
 ## Initial Projects
 
@@ -182,3 +185,4 @@ Recommended reading order:
 17. `docs/16-deployment-runbook.md`
 18. `docs/17-vercel-analytics-foundation.md`
 19. `docs/18-custom-event-tracking-foundation.md`
+20. `docs/19-supabase-analytics-persistence.md`

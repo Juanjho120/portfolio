@@ -1,9 +1,7 @@
 "use client";
 
-import { track } from "@vercel/analytics";
+import { trackPortfolioEvent, type TrackingProperties } from "@/lib/analytics";
 import type { AnchorHTMLAttributes, MouseEvent, ReactNode } from "react";
-
-type TrackingProperties = Record<string, string | number | boolean>;
 
 type TrackedLinkProps = Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "href" | "onClick"> & {
   href: string;
@@ -22,12 +20,7 @@ export function TrackedLink({
   ...anchorProps
 }: TrackedLinkProps) {
   function handleClick(event: MouseEvent<HTMLAnchorElement>) {
-    try {
-      track(trackingEvent, trackingProperties);
-    } catch {
-      // Analytics must never block navigation or downloads.
-    }
-
+    trackPortfolioEvent(trackingEvent, trackingProperties);
     onClick?.(event);
   }
 
