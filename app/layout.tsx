@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 
 import { AnimatedPcbBackground } from "@/components/AnimatedPcbBackground";
 
@@ -32,6 +33,7 @@ export default function RootLayout({
         <AnimatedPcbBackground />
 
         <div className="relative z-10 min-h-screen">{children}</div>
+        <Analytics />
       </body>
     </html>
   );

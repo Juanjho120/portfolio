@@ -11,7 +11,7 @@ This project is the central entry point for my software engineering work. It pre
 - Tailwind CSS
 - Vercel
 - Supabase for custom analytics later
-- Vercel Analytics for general metrics later
+- Vercel Analytics for general metrics
 
 ## Main Goal
 
@@ -95,6 +95,19 @@ docs/04-deployment-and-domains.md
 docs/16-deployment-runbook.md
 ```
 
+## Analytics
+
+The portfolio uses Vercel Analytics for general traffic metrics.
+
+It is implemented with:
+
+```txt
+@vercel/analytics
+app/layout.tsx
+```
+
+Custom project click tracking, CV download tracking, external link tracking and Supabase persistence are planned for the next analytics phases.
+
 ## Initial Projects
 
 - TAMIAS
@@ -156,3 +169,4 @@ Recommended reading order:
 15. `docs/14-pcb-routing-geometry-correction.md`
 16. `docs/15-pcb-lighting-and-chip-visibility.md`
 17. `docs/16-deployment-runbook.md`
+18. `docs/17-vercel-analytics-foundation.md`

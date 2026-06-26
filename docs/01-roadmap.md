@@ -146,6 +146,33 @@ Status: Completed
 - Track external profile clicks.
 - Store event locale when available.
 
+Status: In Progress
+
+## Phase 7A - Vercel Analytics Foundation
+
+- Install `@vercel/analytics`.
+- Add the Vercel Analytics component to the root layout.
+- Keep analytics collection global across `/`, `/en` and `/es`.
+- Keep custom click tracking and Supabase persistence out of this phase.
+- Document the implementation and validation steps.
+
+Status: Completed
+
+## Phase 7B - Custom Event Tracking Foundation
+
+- Track project card clicks.
+- Track CV download clicks.
+- Track external profile clicks.
+- Include locale and event source in each custom event.
+
+Status: Pending
+
+## Phase 7C - Supabase Analytics Persistence
+
+- Define the custom analytics event table.
+- Configure Supabase environment variables.
+- Persist custom events through a server-side endpoint.
+
 Status: Pending
 
 ## Phase 8 - Admin Analytics Dashboard
