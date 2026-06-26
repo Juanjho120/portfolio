@@ -92,6 +92,17 @@ Status: Completed
 
 Status: Completed
 
+## Phase 5.4 - PCB Background Sync and Routing
+
+- Sync chip glow more closely with energy pulse arrival.
+- Replace 90-degree-looking PCB route breaks with 45-degree transitions.
+- Make chip backgrounds more opaque so traces do not show through.
+- Restyle random PCB nodes as proper vias.
+- Add more PCB paths and auxiliary buses.
+- Keep chip size, background color and mobile density stable.
+
+Status: Completed
+
 ## Phase 6 - Deployment
 
 - Deploy portfolio to Vercel.
