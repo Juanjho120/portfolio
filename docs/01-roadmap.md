@@ -210,6 +210,17 @@ Status: In Progress
 
 Status: Completed
 
+
+## Phase 8B - Analytics Tables and Filters
+
+- Add dashboard filters for date range, event type, locale, target and free-text search.
+- Apply filters server-side before calculating dashboard metrics.
+- Keep filter options generated from the Supabase event sample.
+- Expand the latest-events table to show the last 50 matching events.
+- Keep Supabase service role usage server-only.
+
+Status: Completed
+
 ## Phase 9 - SEO and Polish
 
 - Add Open Graph image.

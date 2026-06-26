@@ -138,12 +138,13 @@ Admin dashboard route:
 /admin/analytics
 ```
 
-It reads custom analytics events from Supabase server-side and can be protected with Basic Auth through environment variables.
+It reads custom analytics events from Supabase server-side, supports filters for date range, event type, locale, target and search, and can be protected with Basic Auth through environment variables.
 
 Admin dashboard documentation:
 
 ```txt
 docs/21-admin-analytics-dashboard-foundation.md
+docs/22-analytics-tables-and-filters.md
 ```
 
 ## Initial Projects
@@ -211,3 +212,5 @@ Recommended reading order:
 19. `docs/18-custom-event-tracking-foundation.md`
 20. `docs/19-supabase-analytics-persistence.md`
 21. `docs/20-analytics-closeout.md`
+22. `docs/21-admin-analytics-dashboard-foundation.md`
+23. `docs/22-analytics-tables-and-filters.md`
