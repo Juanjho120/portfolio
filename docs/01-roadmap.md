@@ -82,6 +82,16 @@ Status: Completed
 
 Status: Completed
 
+## Phase 5.3 - PCB Background Polish
+
+- Make chip illumination more visible when energy reaches each chip.
+- Redraw PCB paths so they visually connect to chip positions.
+- Replace dot-like decorations with proper microchip pins.
+- Keep the approved background density, chip size, path visibility, colors and mobile behavior.
+- Document the polish decisions.
+
+Status: Completed
+
 ## Phase 6 - Deployment
 
 - Deploy portfolio to Vercel.
