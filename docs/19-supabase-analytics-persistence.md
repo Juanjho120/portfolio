@@ -2,34 +2,9 @@
 
 ## Objective
 
-Add a server-side persistence layer for custom portfolio analytics events so the project can store long-term interaction data in Supabase.
+Persist portfolio custom events in Supabase so the portfolio can later power a private analytics dashboard without relying only on Vercel Analytics.
 
-This phase builds on:
-
-- Phase 7A: Vercel Analytics foundation
-- Phase 7B: Custom event tracking foundation
-
-## Scope
-
-Included:
-
-- Add a client helper that keeps Vercel Analytics tracking and optionally mirrors events to `/api/analytics/events`.
-- Add a Next.js Route Handler at `/api/analytics/events`.
-- Persist sanitized events to Supabase through the Data REST API from server-side code.
-- Add environment variable documentation through `.env.example`.
-- Document the Supabase SQL table.
-- Keep persistence disabled by default until Supabase production credentials are configured.
-
-Not included yet:
-
-- Private analytics dashboard.
-- Admin authentication.
-- Aggregated analytics queries.
-- Session tracking or user identity.
-
-Those items belong to Phase 8.
-
-## Files
+## Implemented Files
 
 ```txt
 .env.example
@@ -37,133 +12,90 @@ app/api/analytics/events/route.ts
 components/TrackedLink.tsx
 lib/analytics.ts
 lib/supabase-analytics.ts
-README.md
-docs/01-roadmap.md
 docs/05-analytics-plan.md
 docs/19-supabase-analytics-persistence.md
+README.md
 ```
 
-## Event Flow
+## Runtime Flow
 
 ```txt
 TrackedLink click
-  -> trackPortfolioEvent()
-    -> Vercel Analytics track()
-    -> optional POST /api/analytics/events
-      -> validate event name
-      -> sanitize payload
-      -> persist to Supabase REST API
+→ trackPortfolioEvent()
+→ Vercel Analytics custom event
+→ POST /api/analytics/events when persistence is enabled
+→ Supabase REST insert
+→ public.portfolio_analytics_events
 ```
 
-The persistence call uses `navigator.sendBeacon()` when available so navigation, external links and downloads are not blocked.
+## Supabase Table
 
-## Feature Flags
-
-Persistence is disabled by default. Enable it only after the Supabase table and Vercel environment variables are ready.
+The table is named:
 
 ```txt
+portfolio_analytics_events
+```
+
+Columns:
+
+```txt
+id uuid primary key
+event_name text
+locale text
+target text
+path text
+referrer text
+user_agent text
+metadata jsonb
+created_at timestamptz
+```
+
+## Environment Variables
+
+Client-side feature flag:
+
+```env
 NEXT_PUBLIC_ANALYTICS_PERSISTENCE_ENABLED=true
+```
+
+Server-side persistence configuration:
+
+```env
 SUPABASE_ANALYTICS_ENABLED=true
 SUPABASE_URL=<supabase-project-url>
 SUPABASE_SERVICE_ROLE_KEY=<server-only-service-role-key>
 SUPABASE_ANALYTICS_TABLE=portfolio_analytics_events
 ```
 
-Important:
+`SUPABASE_SERVICE_ROLE_KEY` must remain server-only and must never use a `NEXT_PUBLIC_` prefix.
 
-```txt
-SUPABASE_SERVICE_ROLE_KEY must never be exposed as NEXT_PUBLIC_*
-```
+## Privacy Rules
 
-## Supabase SQL
-
-Run this in the Supabase SQL editor:
-
-```sql
-create extension if not exists pgcrypto;
-
-create table if not exists public.portfolio_analytics_events (
-  id uuid primary key default gen_random_uuid(),
-  event_name text not null,
-  locale text null,
-  target text null,
-  path text null,
-  referrer text null,
-  user_agent text null,
-  metadata jsonb not null default '{}'::jsonb,
-  created_at timestamptz not null default now()
-);
-
-create index if not exists idx_portfolio_analytics_events_created_at
-  on public.portfolio_analytics_events (created_at desc);
-
-create index if not exists idx_portfolio_analytics_events_event_name
-  on public.portfolio_analytics_events (event_name);
-
-create index if not exists idx_portfolio_analytics_events_locale
-  on public.portfolio_analytics_events (locale);
-
-create index if not exists idx_portfolio_analytics_events_target
-  on public.portfolio_analytics_events (target);
-
-alter table public.portfolio_analytics_events enable row level security;
-
-grant insert on table public.portfolio_analytics_events to service_role;
-grant select on table public.portfolio_analytics_events to service_role;
-```
-
-The endpoint writes through server-side code using the service role key, so no public insert policy is required.
-
-## Allowed Events
-
-```txt
-Project Demo Click
-Project GitHub Click
-CV Download Click
-External Contact Click
-External Profile Click
-```
-
-## Stored Fields
-
-```txt
-event_name
-locale
-target
-path
-referrer
-user_agent
-metadata
-created_at
-```
-
-## Privacy Notes
-
-This phase intentionally avoids storing:
+The persistence layer intentionally avoids storing:
 
 - IP addresses
 - Exact geolocation
 - User identity
-- Fingerprinting IDs
+- Fingerprinting identifiers
 
-The goal is portfolio interaction analysis, not invasive visitor tracking.
+Stored data is limited to interaction-level portfolio events, locale, path, referrer, user agent and compact metadata.
 
-## Validation
+## Production Validation
 
-Local validation:
+Production validation was completed after:
 
-```bash
-npm run lint
-npm run build
-```
+1. Creating the `portfolio_analytics_events` table in Supabase.
+2. Configuring the environment variables in Vercel.
+3. Redeploying the production deployment.
+4. Triggering portfolio interactions from production.
+5. Confirming rows were inserted into Supabase.
 
-Production validation after configuring Supabase variables in Vercel:
+Validated interactions:
 
-```txt
-1. Open /en and /es.
-2. Click a project card image.
-3. Click a project Live Demo button.
-4. Click CV from hero or footer.
-5. Confirm new rows in public.portfolio_analytics_events.
-6. Confirm navigation/download behavior remains normal.
-```
+- Project demo clicks
+- CV download clicks
+- External profile/contact clicks
+
+## Status
+
+Completed.

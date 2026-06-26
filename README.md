@@ -97,7 +97,13 @@ docs/16-deployment-runbook.md
 
 ## Analytics
 
-The portfolio uses Vercel Analytics for general traffic metrics and a Supabase-ready custom event persistence layer for portfolio interactions.
+The portfolio uses Vercel Analytics for general traffic metrics and Supabase custom event persistence for portfolio interactions.
+
+Analytics status:
+
+```txt
+Completed
+```
 
 It is implemented with:
 
@@ -120,7 +126,7 @@ External Contact Click
 External Profile Click
 ```
 
-Each event includes the current locale and a target identifier. Supabase persistence is handled by `/api/analytics/events` and remains feature-flagged through environment variables until production Supabase credentials are configured.
+Each event includes the current locale and a target identifier. Supabase persistence is handled by `/api/analytics/events`, writes to `portfolio_analytics_events`, and was validated in production after configuring Supabase environment variables in Vercel.
 
 ## Initial Projects
 
@@ -186,3 +192,4 @@ Recommended reading order:
 18. `docs/17-vercel-analytics-foundation.md`
 19. `docs/18-custom-event-tracking-foundation.md`
 20. `docs/19-supabase-analytics-persistence.md`
+21. `docs/20-analytics-closeout.md`

@@ -10,6 +10,8 @@ Use Vercel Analytics for:
 - Visitors
 - General traffic metrics
 
+Status: Implemented through `@vercel/analytics` in the root layout.
+
 ## Custom Events
 
 Use Vercel custom events for lightweight interaction tracking and Supabase persistence for long-term custom reporting.
@@ -29,6 +31,8 @@ Each event includes:
 
 The client-side tracking layer calls Vercel Analytics first, then optionally posts the same compact event payload to `/api/analytics/events` when Supabase persistence is enabled.
 
+Status: Implemented and validated in production.
+
 ## Supabase Persistence
 
 The persistence endpoint is:
@@ -37,9 +41,9 @@ The persistence endpoint is:
 /api/analytics/events
 ```
 
-The endpoint is disabled by default and only writes to Supabase when these environment variables are configured:
+The endpoint only writes to Supabase when these environment variables are configured:
 
-```txt
+```env
 NEXT_PUBLIC_ANALYTICS_PERSISTENCE_ENABLED=true
 SUPABASE_ANALYTICS_ENABLED=true
 SUPABASE_URL=<supabase-project-url>
@@ -48,6 +52,8 @@ SUPABASE_ANALYTICS_TABLE=portfolio_analytics_events
 ```
 
 `SUPABASE_SERVICE_ROLE_KEY` must stay server-only and must never be exposed with a `NEXT_PUBLIC_` prefix.
+
+Status: Implemented and validated in production.
 
 ## Supabase Table
 
@@ -107,6 +113,17 @@ When a user clicks the CV link, track:
 - Event name: `CV Download Click`
 - `locale`
 - `target`: source area, for example `hero` or `footer`
+
+## Production Validation
+
+Production validation completed after configuring Supabase environment variables in Vercel and redeploying.
+
+Validated behavior:
+
+- Custom click events call `/api/analytics/events`.
+- The endpoint persists rows into `portfolio_analytics_events`.
+- Events include locale and target information.
+- No IP address, exact geolocation, user identity or browser fingerprint is stored.
 
 ## Future Admin Dashboard
 

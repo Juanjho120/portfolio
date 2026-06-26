@@ -145,8 +145,9 @@ Status: Completed
 - Track CV downloads.
 - Track external profile clicks.
 - Store event locale when available.
+- Validate custom event persistence in production.
 
-Status: In Progress
+Status: Completed
 
 ## Phase 7A - Vercel Analytics Foundation
 
@@ -174,6 +175,15 @@ Status: Completed
 - Persist custom events through a server-side endpoint.
 - Keep persistence feature-flagged so Vercel Analytics remains safe while Supabase is configured.
 - Sanitize event payloads and avoid storing IP addresses or fingerprinting data.
+
+Status: Completed
+
+## Phase 7D - Analytics Closeout
+
+- Confirm Supabase persistence was validated in production.
+- Mark the parent Analytics phase as completed.
+- Document the final event pipeline from `TrackedLink` to Supabase.
+- Keep Phase 8 as the next formal analytics milestone.
 
 Status: Completed
 
