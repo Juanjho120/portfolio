@@ -4,7 +4,7 @@ export function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a href="#top" className="group flex flex-col leading-none" aria-label="Ir al inicio">
           <span className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">
-            Juan Tzun
+            Juan José Tzun Monterroso
           </span>
           <span className="mt-1 text-base font-bold text-slate-950 dark:text-white">
             Full Stack Developer
