@@ -130,3 +130,5 @@ Recommended reading order:
 12. `docs/11-animated-pcb-background.md`
 13. `docs/12-pcb-background-polish.md`
 14. `docs/13-pcb-background-sync-and-routing.md`
+15. `docs/14-pcb-routing-geometry-correction.md`
+16. `docs/15-pcb-lighting-and-chip-visibility.md`
