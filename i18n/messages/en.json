@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "title": "Juan Tzun | Full Stack Developer",
-    "description": "Juan Tzun's professional portfolio: full-stack projects with Java, Spring Boot, Angular, React, PostgreSQL, Docker, and applied AI."
+    "title": "Juan José Tzun Monterroso | Full Stack Developer",
+    "description": "Juan José Tzun Monterroso's professional portfolio: full-stack projects with Java, Spring Boot, Angular, React, PostgreSQL, Docker, and applied AI."
   },
   "navigation": {
     "ariaHome": "Go to home",
-    "name": "Juan Tzun",
+    "name": "Juan José Tzun Monterroso",
     "role": "Full Stack Developer",
     "projects": "Projects",
     "contact": "Contact"
@@ -124,7 +124,7 @@
     }
   },
   "footer": {
-    "name": "Juan Tzun",
+    "name": "Juan José Tzun Monterroso",
     "tagline": "Full Stack Developer · Java · Spring Boot · Angular · React · AI",
     "email": "Email",
     "github": "GitHub",
