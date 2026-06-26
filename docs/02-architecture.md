@@ -47,7 +47,7 @@ Render static portfolio page
 The root route redirects to the default locale:
 
 ```text
-/ → /es
+/ → /en
 ```
 
 ## Custom Analytics Flow

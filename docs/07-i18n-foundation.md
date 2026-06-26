@@ -18,7 +18,7 @@ Supported routes:
 Default route:
 
 ```txt
-/ → /es
+/ → /en
 ```
 
 ## Files Added

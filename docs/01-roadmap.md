@@ -37,7 +37,7 @@ Status: Completed
 ## Phase 4 - English/Spanish i18n Foundation
 
 - Add locale routes for `/es` and `/en`.
-- Redirect `/` to the default locale `/es`.
+- Redirect `/` to the default locale `/en`.
 - Add JSON dictionaries for Spanish and English.
 - Add an internal dictionary loader.
 - Add a language switcher.

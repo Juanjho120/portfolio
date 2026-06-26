@@ -36,7 +36,7 @@ The portfolio supports Spanish and English routes:
 The root route redirects to the default locale:
 
 ```txt
-/ → /es
+/ → /en
 ```
 
 Visible copy is managed through JSON dictionaries:
