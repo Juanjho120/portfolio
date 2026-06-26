@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">AI logo</title>
+  <path fill="#7c3aed" d="M32 5.5 54.9 18.7v26.6L32 58.5 9.1 45.3V18.7L32 5.5Z"/>
+  <path fill="#a78bfa" d="M32 12.3 49 22v20L32 51.7 15 42V22l17-9.7Z"/>
+  <path fill="#fff" d="M23.3 42h-4.1l8.4-20h3.7l8.4 20h-4.2l-1.8-4.4h-8.6L23.3 42Zm3.2-7.7h5.8l-2.9-7.1-2.9 7.1ZM42.1 42V22h3.9v20h-3.9Z"/>
+</svg>
