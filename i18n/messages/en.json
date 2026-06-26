@@ -1,0 +1,98 @@
+{
+  "metadata": {
+    "title": "Juan Tzun | Full Stack Developer",
+    "description": "Juan Tzun's professional portfolio: full-stack projects with Java, Spring Boot, Angular, React, PostgreSQL, Docker, and applied AI."
+  },
+  "navigation": {
+    "ariaHome": "Go to home",
+    "name": "Juan Tzun",
+    "role": "Full Stack Developer",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "languageSwitcher": {
+    "label": "Change language",
+    "es": "ES",
+    "en": "EN"
+  },
+  "hero": {
+    "eyebrow": "Professional portfolio · juantzun.dev",
+    "title": "I build full-stack web platforms focused on operations, data, and applied AI.",
+    "description": "I am a full-stack developer with experience in Java, Spring Boot, Angular, React, PostgreSQL, Docker, and AI-powered solutions. This portfolio brings together projects designed as real products, with clear architecture, deployment strategy, and practical use cases.",
+    "actions": {
+      "projects": "View projects",
+      "cv": "Download CV",
+      "contact": "Contact me"
+    },
+    "stats": [
+      {
+        "value": "6+",
+        "label": "years of experience"
+      },
+      {
+        "value": "Java",
+        "label": "robust backends"
+      },
+      {
+        "value": "Angular",
+        "label": "productive frontends"
+      },
+      {
+        "value": "AI",
+        "label": "RAG and agents"
+      }
+    ]
+  },
+  "projectGrid": {
+    "eyebrow": "Portfolio",
+    "title": "Projects designed as real products",
+    "description": "Each project is designed to showcase full-stack architecture, product thinking, deployment, data, applied AI, and real-world problem solving."
+  },
+  "projectCards": {
+    "liveDemo": "Live Demo",
+    "github": "GitHub",
+    "openDemoAriaPrefix": "Open demo for",
+    "status": {
+      "active": "Active",
+      "inDevelopment": "In development",
+      "planned": "Planned"
+    }
+  },
+  "projects": {
+    "tamias": {
+      "description": "Operational management platform for small rental businesses: reservations, maintenance, purchases, inventory, documents, and an AI assistant.",
+      "highlights": ["Rental operations", "AI with RAG", "Private files in S3"]
+    },
+    "knowledgehub": {
+      "description": "AI-powered document management system with permissions, semantic search, RAG, and a chatbot over business documents.",
+      "highlights": ["Document management", "Permissions", "Chatbot over files"]
+    },
+    "elections": {
+      "description": "Platform for processing and visualizing massive electoral datasets with batch pipelines, dashboards, and monitoring.",
+      "highlights": ["Massive processing", "Dashboards", "Observability"]
+    },
+    "devflow": {
+      "description": "Platform for visibility into deployments, pipelines, errors, incidents, and engineering team metrics.",
+      "highlights": ["Deploy visibility", "Incidents", "Technical metrics"]
+    },
+    "mcp": {
+      "description": "AI agents connected to real tools through MCP, designed to automate technical and operational workflows.",
+      "highlights": ["Real MCP", "AI agents", "Connected tools"]
+    },
+    "performancelab": {
+      "description": "Laboratory for SQL query analysis, execution plans, index recommendations, and performance comparison.",
+      "highlights": ["Query analysis", "Indexes", "Performance tuning"]
+    },
+    "proteus": {
+      "description": "Modern ERP based on a real system: inventory, billing, credits, permissions, reports, auditing, and an AI assistant.",
+      "highlights": ["ERP", "Auditing", "AI assistant"]
+    }
+  },
+  "footer": {
+    "name": "Juan Tzun",
+    "tagline": "Full Stack Developer · Java · Spring Boot · Angular · React · AI",
+    "email": "Email",
+    "github": "GitHub",
+    "cv": "CV"
+  }
+}

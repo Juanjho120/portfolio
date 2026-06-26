@@ -1,0 +1,98 @@
+{
+  "metadata": {
+    "title": "Juan Tzun | Full Stack Developer",
+    "description": "Portfolio profesional de Juan Tzun: proyectos full-stack con Java, Spring Boot, Angular, React, PostgreSQL, Docker e IA aplicada."
+  },
+  "navigation": {
+    "ariaHome": "Ir al inicio",
+    "name": "Juan Tzun",
+    "role": "Full Stack Developer",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "languageSwitcher": {
+    "label": "Cambiar idioma",
+    "es": "ES",
+    "en": "EN"
+  },
+  "hero": {
+    "eyebrow": "Portfolio profesional · juantzun.dev",
+    "title": "Construyo plataformas web full-stack con foco en operación, datos e IA aplicada.",
+    "description": "Soy desarrollador full-stack con experiencia en Java, Spring Boot, Angular, React, PostgreSQL, Docker y soluciones con IA. Este portfolio reúne proyectos pensados como productos reales, con arquitectura clara, despliegue y casos de uso prácticos.",
+    "actions": {
+      "projects": "Ver proyectos",
+      "cv": "Descargar CV",
+      "contact": "Contactarme"
+    },
+    "stats": [
+      {
+        "value": "6+",
+        "label": "años de experiencia"
+      },
+      {
+        "value": "Java",
+        "label": "backend robusto"
+      },
+      {
+        "value": "Angular",
+        "label": "frontends productivos"
+      },
+      {
+        "value": "IA",
+        "label": "RAG y agentes"
+      }
+    ]
+  },
+  "projectGrid": {
+    "eyebrow": "Portfolio",
+    "title": "Proyectos diseñados como productos reales",
+    "description": "Cada proyecto está pensado para demostrar arquitectura full-stack, criterio de producto, despliegue, datos, IA aplicada y resolución de problemas reales."
+  },
+  "projectCards": {
+    "liveDemo": "Live Demo",
+    "github": "GitHub",
+    "openDemoAriaPrefix": "Abrir demo de",
+    "status": {
+      "active": "Activo",
+      "inDevelopment": "En desarrollo",
+      "planned": "Planeado"
+    }
+  },
+  "projects": {
+    "tamias": {
+      "description": "Plataforma de administración operativa para alojamientos pequeños: reservas, mantenimiento, compras, inventario, documentos y asistente IA.",
+      "highlights": ["Operación de alojamientos", "IA con RAG", "Archivos privados en S3"]
+    },
+    "knowledgehub": {
+      "description": "Sistema documental con IA, permisos, búsqueda semántica, RAG y chatbot sobre documentos empresariales.",
+      "highlights": ["Gestión documental", "Permisos", "Chatbot sobre archivos"]
+    },
+    "elections": {
+      "description": "Plataforma para procesar y visualizar datos electorales masivos con pipelines batch, dashboards y monitoreo.",
+      "highlights": ["Procesamiento masivo", "Dashboards", "Observabilidad"]
+    },
+    "devflow": {
+      "description": "Plataforma para visibilidad de deploys, pipelines, errores, incidentes y métricas de equipos de desarrollo.",
+      "highlights": ["Deploy visibility", "Incidentes", "Métricas técnicas"]
+    },
+    "mcp": {
+      "description": "Agentes IA conectados a herramientas reales mediante MCP, pensados para automatizar flujos técnicos y operativos.",
+      "highlights": ["MCP real", "Agentes IA", "Herramientas conectadas"]
+    },
+    "performancelab": {
+      "description": "Laboratorio para análisis de queries SQL, planes de ejecución, recomendaciones de índices y comparación de rendimiento.",
+      "highlights": ["Query analysis", "Índices", "Performance tuning"]
+    },
+    "proteus": {
+      "description": "ERP moderno basado en un sistema real: inventario, facturación, créditos, permisos, reportes, auditoría y asistente IA.",
+      "highlights": ["ERP", "Auditoría", "AI assistant"]
+    }
+  },
+  "footer": {
+    "name": "Juan Tzun",
+    "tagline": "Full Stack Developer · Java · Spring Boot · Angular · React · IA",
+    "email": "Email",
+    "github": "GitHub",
+    "cv": "CV"
+  }
+}

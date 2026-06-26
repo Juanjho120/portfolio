@@ -1,5 +1,20 @@
 # Projects Catalog
 
+Project technical metadata is stored in:
+
+```txt
+data/projects.ts
+```
+
+Translated descriptions and highlights are stored in:
+
+```txt
+i18n/messages/es.json
+i18n/messages/en.json
+```
+
+This split keeps URLs, stacks and slugs stable while allowing each visible description to be localized.
+
 ## TAMIAS
 
 URL:

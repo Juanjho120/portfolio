@@ -16,6 +16,7 @@ This phase adds:
 - Reusable project cards.
 - Responsive project grid.
 - Footer with contact links.
+- A professional README replacing the default `create-next-app` README.
 
 ## Components
 
@@ -26,13 +27,34 @@ This phase adds:
 
 ## Data Source
 
-Project information is stored in:
+Project information starts as static data to keep the initial version simple, cheap to run, and easy to deploy.
+
+After the i18n foundation, project data is split into two responsibilities:
 
 ```txt
 data/projects.ts
 ```
 
-The portfolio intentionally starts with static data to keep the initial version simple, cheap to run, and easy to deploy.
+Stores technical metadata:
+
+- Slug
+- Title
+- Stack
+- Live demo URL
+- Optional GitHub URL
+- Status key
+
+```txt
+i18n/messages/es.json
+i18n/messages/en.json
+```
+
+Stores visible copy:
+
+- Project descriptions
+- Project highlights
+- Status labels
+- UI labels
 
 ## Images and CV
 
@@ -49,7 +71,9 @@ The CV button expects this file when ready:
 public/cv/Juan_Tzun_CV.pdf
 ```
 
-Project cards currently use a clean visual placeholder. Real screenshots can be added later without changing the project catalog shape.
+Project cards currently use a clean visual placeholder.
+
+Real screenshots can be added later without changing the project catalog shape.
 
 ## Next Steps
 
@@ -57,6 +81,7 @@ Recommended follow-up phases:
 
 1. Add real project screenshots.
 2. Add the final CV PDF.
-3. Add Vercel Analytics.
-4. Add Supabase click tracking.
-5. Replace placeholders with case-study style project detail pages if needed.
+3. Deploy the portfolio to Vercel.
+4. Add Vercel Analytics.
+5. Add Supabase click tracking.
+6. Replace placeholders with case-study style project detail pages if needed.

@@ -11,6 +11,7 @@ The portfolio will be deployed at:
 - Present professional software projects as product-like case studies.
 - Link each project to its live demo.
 - Show screenshots, architecture, stack, CI/CD status, and GitHub metrics.
+- Support Spanish and English from the beginning.
 - Track visits and project card clicks.
 - Serve as the central entry point for all portfolio projects.
 
@@ -37,6 +38,28 @@ Selected options:
 - App Router: Yes
 - Import alias: `@/*`
 - AGENTS.md: Yes
+
+## Language Strategy
+
+The portfolio supports English and Spanish through locale routes:
+
+- `/es`
+- `/en`
+
+The root route `/` redirects to `/es`.
+
+Static UI copy is stored in JSON dictionaries:
+
+```txt
+/i18n/messages/es.json
+/i18n/messages/en.json
+```
+
+Technical project metadata remains centralized in:
+
+```txt
+/data/projects.ts
+```
 
 ## Portfolio Domain
 

@@ -38,6 +38,7 @@ id uuid primary key default gen_random_uuid(),
 event_type text not null,
 project_slug text null,
 destination_url text null,
+locale text null,
 user_agent text null,
 created_at timestamptz not null default now()
 ```
@@ -49,6 +50,16 @@ When a user clicks a project card, save:
 - Event type: `project_click`
 - Project slug
 - Destination URL
+- Current locale when available
+- Timestamp
+- User agent
+
+## CV Download Event
+
+When a user clicks the CV link, save:
+
+- Event type: `cv_download`
+- Current locale when available
 - Timestamp
 - User agent
 
@@ -63,6 +74,7 @@ Metrics:
 - Total visits
 - Total project clicks
 - Clicks by project
+- Clicks by locale
 - Most clicked project
 - Latest events
 - CV downloads

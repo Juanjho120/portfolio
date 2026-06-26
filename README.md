@@ -24,6 +24,28 @@ Showcase full-stack projects focused on:
 - AI features with RAG, OpenAI, Spring AI, Chroma and MCP
 - Real operational use cases
 
+## Languages
+
+The portfolio supports Spanish and English routes:
+
+```txt
+/es
+/en
+```
+
+The root route redirects to the default locale:
+
+```txt
+/ → /es
+```
+
+Visible copy is managed through JSON dictionaries:
+
+```txt
+i18n/messages/es.json
+i18n/messages/en.json
+```
+
 ## Initial Projects
 
 - TAMIAS
@@ -44,6 +66,13 @@ Open the app at:
 
 ```txt
 http://localhost:3000
+```
+
+Recommended routes for testing:
+
+```txt
+http://localhost:3000/es
+http://localhost:3000/en
 ```
 
 ## Useful Scripts
@@ -68,3 +97,4 @@ Recommended reading order:
 5. `docs/04-deployment-and-domains.md`
 6. `docs/05-analytics-plan.md`
 7. `docs/06-landing-page-mvp.md`
+8. `docs/07-i18n-foundation.md`

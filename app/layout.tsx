@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Juan Tzun | Full Stack Developer",
   description:
-    "Portfolio profesional de Juan Tzun: proyectos full-stack con Java, Spring Boot, Angular, React, PostgreSQL, Docker e IA aplicada.",
+    "Professional portfolio for Juan Tzun: full-stack projects with Java, Spring Boot, Angular, React, PostgreSQL, Docker, and applied AI.",
 };
 
 export default function RootLayout({
