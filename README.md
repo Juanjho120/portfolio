@@ -72,6 +72,23 @@ data/pcb-background.ts
 
 The background uses CSS animations, SVG paths, responsive chip positioning, PCB-style vias, audited 45-degree routed traces, synchronized chip glow states, chip-entry trace cleanup, and respects `prefers-reduced-motion`.
 
+## Deployment
+
+The portfolio is prepared to deploy on Vercel from the `main` branch.
+
+Main production domain:
+
+```txt
+https://juantzun.dev
+```
+
+Deployment documentation:
+
+```txt
+docs/04-deployment-and-domains.md
+docs/16-deployment-runbook.md
+```
+
 ## Initial Projects
 
 - TAMIAS
@@ -132,3 +149,4 @@ Recommended reading order:
 14. `docs/13-pcb-background-sync-and-routing.md`
 15. `docs/14-pcb-routing-geometry-correction.md`
 16. `docs/15-pcb-lighting-and-chip-visibility.md`
+17. `docs/16-deployment-runbook.md`

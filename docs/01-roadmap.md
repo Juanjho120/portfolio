@@ -114,7 +114,6 @@ Status: Completed
 
 Status: Completed
 
-
 ## Phase 5.6 - PCB Lighting and Chip Visibility
 
 - Make chip illumination more explicit when energy arrives.
@@ -129,11 +128,14 @@ Status: Completed
 
 - Deploy portfolio to Vercel.
 - Configure `juantzun.dev`.
+- Configure `www.juantzun.dev`.
 - Configure preview deployments.
 - Configure production branch as `main`.
 - Configure Cloudflare DNS records.
+- Validate `/`, `/en`, `/es`, CV route, project links, desktop, mobile and accessibility behavior.
+- Document rollback and smoke-test process.
 
-Status: Pending
+Status: In Progress
 
 ## Phase 7 - Analytics
 
