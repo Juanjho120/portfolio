@@ -51,15 +51,15 @@ export default async function LocaleHome({ params }: LocalePageProps) {
       <main>
         <section className="mx-auto flex min-h-[calc(100vh-5rem)] w-full max-w-7xl flex-col items-start justify-center px-6 py-20 sm:px-8 lg:px-10">
           <div className="max-w-4xl">
-            <p className="mb-5 inline-flex rounded-full border border-slate-200 bg-white/80 px-4 py-2 text-sm font-medium text-slate-700 shadow-sm shadow-slate-950/5 dark:border-slate-800 dark:bg-slate-900/70 dark:text-slate-300">
+            <p className="mb-5 inline-flex rounded-full border border-cyan-300/25 bg-slate-950/80 px-4 py-2 text-sm font-medium text-cyan-100 shadow-lg shadow-slate-950/20 backdrop-blur">
               {dictionary.hero.eyebrow}
             </p>
 
-            <h1 className="text-balance text-5xl font-semibold tracking-tight text-slate-950 sm:text-6xl lg:text-7xl dark:text-white">
+            <h1 className="text-balance text-5xl font-semibold tracking-tight text-white drop-shadow-[0_2px_18px_rgba(2,6,23,0.55)] sm:text-6xl lg:text-7xl">
               {dictionary.hero.title}
             </h1>
 
-            <p className="mt-6 max-w-3xl text-pretty text-lg leading-8 text-slate-600 sm:text-xl dark:text-slate-300">
+            <p className="mt-6 max-w-3xl text-pretty text-lg leading-8 text-slate-200 drop-shadow-[0_1px_12px_rgba(2,6,23,0.45)] sm:text-xl">
               {dictionary.hero.description}
             </p>
 
@@ -82,7 +82,7 @@ export default async function LocaleHome({ params }: LocalePageProps) {
               </TrackedLink>
               <TrackedLink
                 href="mailto:juan.jose120@hotmail.com"
-                className="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-slate-700 transition hover:text-slate-950 dark:text-slate-300 dark:hover:text-white"
+                className="inline-flex items-center justify-center rounded-full border border-cyan-300/20 bg-slate-950/45 px-6 py-3 text-sm font-semibold text-cyan-100 shadow-sm shadow-slate-950/20 backdrop-blur transition hover:-translate-y-0.5 hover:border-cyan-200/50 hover:bg-slate-900/75 hover:text-white"
                 trackingEvent="External Contact Click"
                 trackingProperties={{ locale, target: "email:hero" }}
               >

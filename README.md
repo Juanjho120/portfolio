@@ -216,3 +216,4 @@ Recommended reading order:
 22. `docs/21-admin-analytics-dashboard-foundation.md`
 23. `docs/22-analytics-tables-and-filters.md`
 24. `docs/23-admin-access-hardening.md`
+25. `docs/24-background-contrast-correction.md`

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #050d18;
+  --background: #020617;
   --foreground: #0f172a;
 }
 
@@ -25,7 +25,7 @@
 
 html {
   min-height: 100%;
-  background: #050d18;
+  background: #020617;
   scroll-behavior: smooth;
 }
 
@@ -34,9 +34,9 @@ body {
   margin: 0;
   overflow-x: hidden;
   background:
-    radial-gradient(circle at 18% 8%, rgba(20, 184, 166, 0.09), transparent 28rem),
-    radial-gradient(circle at 82% 18%, rgba(14, 165, 233, 0.08), transparent 30rem),
-    linear-gradient(135deg, #01050f 0%, #05101b 45%, #02151d 100%);
+    radial-gradient(circle at 18% 8%, rgba(20, 184, 166, 0.035), transparent 26rem),
+    radial-gradient(circle at 82% 18%, rgba(14, 165, 233, 0.03), transparent 28rem),
+    linear-gradient(135deg, #020617 0%, #030712 48%, #020617 100%);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -46,7 +46,7 @@ a {
 }
 
 ::selection {
-  background: rgba(34, 211, 238, 0.35);
+  background: rgba(34, 211, 238, 0.28);
 }
 
 .pcb-background {
@@ -56,20 +56,20 @@ a {
   overflow: hidden;
   pointer-events: none;
   background:
-    radial-gradient(circle at 12% 12%, rgba(34, 211, 238, 0.09), transparent 24rem),
-    radial-gradient(circle at 88% 24%, rgba(45, 212, 191, 0.08), transparent 26rem),
-    radial-gradient(circle at 48% 92%, rgba(59, 130, 246, 0.07), transparent 30rem),
-    linear-gradient(135deg, #01050f 0%, #05101b 48%, #02151d 100%);
+    radial-gradient(circle at 12% 12%, rgba(34, 211, 238, 0.11), transparent 24rem),
+    radial-gradient(circle at 88% 24%, rgba(45, 212, 191, 0.1), transparent 26rem),
+    radial-gradient(circle at 48% 92%, rgba(59, 130, 246, 0.09), transparent 30rem),
+    linear-gradient(135deg, #020817 0%, #06111f 48%, #031922 100%);
 }
 
 .pcb-background__grid {
   position: absolute;
   inset: 0;
   z-index: 1;
-  opacity: 0.2;
+  opacity: 0.24;
   background-image:
-    linear-gradient(rgba(148, 163, 184, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(148, 163, 184, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(148, 163, 184, 0.038) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.038) 1px, transparent 1px);
   background-size: 56px 56px;
   mask-image: radial-gradient(circle at center, transparent 0%, black 20%, black 100%);
 }
@@ -81,11 +81,17 @@ a {
   background:
     radial-gradient(
       ellipse at 50% 18%,
-      rgba(248, 250, 252, 0.88) 0%,
-      rgba(248, 250, 252, 0.78) 31%,
-      rgba(226, 232, 240, 0.28) 52%,
-      rgba(15, 23, 42, 0.03) 73%,
+      rgba(248, 250, 252, 0.72) 0%,
+      rgba(248, 250, 252, 0.56) 28%,
+      rgba(226, 232, 240, 0.18) 50%,
+      rgba(15, 23, 42, 0.04) 72%,
       transparent 100%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(2, 6, 23, 0.1) 0%,
+      rgba(2, 6, 23, 0.16) 52%,
+      rgba(2, 6, 23, 0.1) 100%
     );
 }
 
@@ -95,7 +101,7 @@ a {
   z-index: 3;
   width: 100%;
   height: 100%;
-  opacity: 0.9;
+  opacity: 0.86;
 }
 
 .pcb-background__traces--mobile {
@@ -112,43 +118,43 @@ a {
   stroke-width: 1.25;
   stroke-linecap: square;
   stroke-linejoin: miter;
-  filter: drop-shadow(0 0 3px rgba(34, 211, 238, 0.22));
+  filter: drop-shadow(0 0 3px rgba(34, 211, 238, 0.2));
 }
 
 .pcb-trace--energy {
   stroke: #67e8f9;
-  stroke-width: 3.1;
+  stroke-width: 3.05;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-dasharray: 8 100;
   stroke-dashoffset: 108;
   opacity: 0;
   filter:
-    drop-shadow(0 0 6px rgba(103, 232, 249, 1))
-    drop-shadow(0 0 16px rgba(34, 211, 238, 0.82));
+    drop-shadow(0 0 5px rgba(103, 232, 249, 0.88))
+    drop-shadow(0 0 12px rgba(34, 211, 238, 0.58));
   animation: pcb-energy-flow var(--pcb-trace-duration) linear infinite;
   animation-delay: var(--pcb-trace-delay);
 }
 
 .pcb-via {
   filter:
-    drop-shadow(0 0 3px rgba(103, 232, 249, 0.86))
-    drop-shadow(0 0 9px rgba(34, 211, 238, 0.46));
+    drop-shadow(0 0 3px rgba(103, 232, 249, 0.7))
+    drop-shadow(0 0 8px rgba(34, 211, 238, 0.36));
 }
 
 .pcb-via__halo {
-  fill: rgba(103, 232, 249, 0.1);
+  fill: rgba(103, 232, 249, 0.055);
 }
 
 .pcb-via__ring {
-  fill: rgba(45, 212, 191, 0.16);
-  stroke: rgba(103, 232, 249, 0.82);
+  fill: rgba(45, 212, 191, 0.08);
+  stroke: rgba(103, 232, 249, 0.54);
   stroke-width: 1.15;
 }
 
 .pcb-via__copper {
-  fill: rgba(20, 184, 166, 0.32);
-  stroke: rgba(153, 246, 228, 0.68);
+  fill: rgba(20, 184, 166, 0.16);
+  stroke: rgba(153, 246, 228, 0.38);
   stroke-width: 0.75;
 }
 
@@ -173,7 +179,7 @@ a {
   transform: translate(-50%, -50%);
   animation: pcb-chip-arrival 14s ease-in-out infinite;
   animation-delay: var(--pcb-chip-delay);
-  filter: drop-shadow(0 12px 24px rgba(2, 6, 23, 0.46));
+  filter: drop-shadow(0 12px 22px rgba(2, 6, 23, 0.62));
   isolation: isolate;
 }
 
@@ -397,41 +403,29 @@ a {
 @media (max-width: 1024px) {
   .pcb-background__readability {
     background:
-      radial-gradient(
-        ellipse at 50% 20%,
-        rgba(248, 250, 252, 0.96) 0%,
-        rgba(248, 250, 252, 0.9) 36%,
-        rgba(226, 232, 240, 0.48) 58%,
-        rgba(15, 23, 42, 0.08) 78%,
-        transparent 100%
-      );
+      radial-gradient(ellipse at 50% 20%, rgba(2, 6, 23, 0.48) 0%, rgba(2, 6, 23, 0.66) 54%, rgba(2, 6, 23, 0.84) 100%),
+      linear-gradient(180deg, rgba(2, 6, 23, 0.58) 0%, rgba(2, 6, 23, 0.76) 100%);
   }
 }
 
 @media (max-width: 767px) {
   .pcb-background {
     background:
-      radial-gradient(circle at 16% 18%, rgba(34, 211, 238, 0.1), transparent 16rem),
-      radial-gradient(circle at 84% 76%, rgba(45, 212, 191, 0.08), transparent 18rem),
-      linear-gradient(145deg, #01050f 0%, #05101b 52%, #02151d 100%);
+      radial-gradient(circle at 16% 18%, rgba(34, 211, 238, 0.11), transparent 16rem),
+      radial-gradient(circle at 84% 76%, rgba(45, 212, 191, 0.09), transparent 18rem),
+      linear-gradient(145deg, #020817 0%, #06111f 52%, #031922 100%);
   }
 
   .pcb-background__grid {
-    opacity: 0.22;
+    opacity: 0.08;
     background-size: 42px 42px;
   }
 
   .pcb-background__readability {
     inset: -20%;
     background:
-      radial-gradient(
-        ellipse at 50% 28%,
-        rgba(248, 250, 252, 0.92) 0%,
-        rgba(248, 250, 252, 0.86) 42%,
-        rgba(226, 232, 240, 0.32) 63%,
-        rgba(15, 23, 42, 0.08) 82%,
-        transparent 100%
-      );
+      radial-gradient(ellipse at 50% 28%, rgba(2, 6, 23, 0.5) 0%, rgba(2, 6, 23, 0.7) 58%, rgba(2, 6, 23, 0.86) 100%),
+      linear-gradient(180deg, rgba(2, 6, 23, 0.62) 0%, rgba(2, 6, 23, 0.82) 100%);
   }
 
   .pcb-background__traces--desktop {
@@ -440,7 +434,7 @@ a {
 
   .pcb-background__traces--mobile {
     display: block;
-    opacity: 0.76;
+    opacity: 0.48;
   }
 
   .pcb-chip--desktop-only {

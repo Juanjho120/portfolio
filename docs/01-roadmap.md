@@ -234,6 +234,16 @@ Status: Completed
 
 Status: Completed
 
+
+## Background Contrast Correction
+
+- Darken the global PCB background without changing chip sizes, chip positions or routing geometry.
+- Replace the bright readability veil with a darker opacity layer so hero and admin text stay readable.
+- Reduce grid, trace, via and energy glow intensity while keeping the decorative PCB visible.
+- Keep Phase 9 SEO work pending until contrast is acceptable in production.
+
+Status: Completed
+
 ## Phase 9 - SEO and Polish
 
 - Add Open Graph image.

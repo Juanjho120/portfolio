@@ -17,8 +17,8 @@
   },
   "hero": {
     "eyebrow": "Portfolio profesional · juantzun.dev",
-    "title": "Construyo plataformas web full-stack con foco en operación, datos e IA aplicada.",
-    "description": "Soy desarrollador full-stack con experiencia en Java, Spring Boot, Angular, React, PostgreSQL, Docker y soluciones con IA. Este portfolio reúne proyectos pensados como productos reales, con arquitectura clara, despliegue y casos de uso prácticos.",
+    "title": "Senior Full Stack Engineer",
+    "description": "Ingeniero Full Stack Senior con más de 5 años de experiencia profesional en la creación, optimización y mantenimiento de aplicaciones empresariales escalables utilizando Java, Spring Boot, React, Angular y bases de datos relacionales. Cuenta con experiencia en el diseño de API REST, desarrollo de microservicios, optimización de cargas de trabajo SQL de alto volumen y entrega de funcionalidades integrales en equipos distribuidos. Posee una trayectoria demostrada en la resolución de problemas en sistemas de producción, la gestión de incidencias críticas bajo presión y la colaboración entre equipos técnicos y de negocio. Actualmente amplía sus conocimientos en tecnologías de la nube, Docker y prácticas de CI/CD, al tiempo que adopta continuamente enfoques de ingeniería modernos y tecnologías emergentes.",
     "actions": {
       "projects": "Ver proyectos",
       "cv": "Descargar CV",

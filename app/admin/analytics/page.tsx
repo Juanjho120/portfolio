@@ -287,14 +287,14 @@ export default async function AdminAnalyticsPage({ searchParams }: AdminAnalytic
   return (
     <main className="relative z-10 min-h-screen px-6 py-16 text-white sm:px-8 lg:px-10">
       <div className="mx-auto max-w-7xl">
-        <div className="max-w-3xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-cyan-200">Portfolio Admin</p>
-          <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">Analytics Dashboard</h1>
-          <p className="mt-5 text-lg leading-8 text-slate-300">
+        <div className="max-w-3xl rounded-3xl border border-slate-800/80 bg-slate-950/88 p-6 shadow-2xl shadow-slate-950/40 backdrop-blur sm:p-8">
+          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-cyan-100">Portfolio Admin</p>
+          <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl">Analytics Dashboard</h1>
+          <p className="mt-5 text-lg leading-8 text-slate-200">
             Production custom-event metrics persisted in Supabase for portfolio project clicks, CV downloads,
             external profile clicks and locale usage.
           </p>
-          <p className="mt-3 text-sm text-slate-500">
+          <p className="mt-4 inline-flex rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-sm font-medium text-cyan-100">
             Latest matching event: {formatDate(dashboard.latestEventAt)} · Loaded sample: {formatNumber(dashboard.totalLoadedEvents)} events
           </p>
         </div>
