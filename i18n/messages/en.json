@@ -64,7 +64,7 @@
   },
   "projects": {
     "tamias": {
-      "description": "Operational management platform for small rental businesses: reservations, maintenance, purchases, inventory, documents, and an AI assistant.",
+      "description": "Operational management platform for small rental businesses: reservations, maintenance, purchases, inventory, documents, and an AI assistant. (email: test@tamias.com, password: holamundo)",
       "highlights": [
         "Rental operations",
         "AI with RAG",

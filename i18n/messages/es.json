@@ -64,7 +64,7 @@
   },
   "projects": {
     "tamias": {
-      "description": "Plataforma de administración operativa para alojamientos pequeños: reservas, mantenimiento, compras, inventario, documentos y asistente IA.",
+      "description": "Plataforma de administración operativa para alojamientos pequeños: reservas, mantenimiento, compras, inventario, documentos y asistente IA. (email: test@tamias.com, password: holamundo)",
       "highlights": [
         "Operación de alojamientos",
         "IA con RAG",

@@ -217,3 +217,4 @@ Recommended reading order:
 23. `docs/22-analytics-tables-and-filters.md`
 24. `docs/23-admin-access-hardening.md`
 25. `docs/24-background-contrast-correction.md`
+26. `docs/25-mobile-background-color-fix.md`

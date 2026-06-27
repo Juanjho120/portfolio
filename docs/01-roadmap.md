@@ -244,6 +244,15 @@ Status: Completed
 
 Status: Completed
 
+## Mobile Background Color Fix
+
+- Keep the mobile PCB background color aligned with the desktop/browser background.
+- Remove the mobile-only dark readability overlay that made the portfolio look almost black on phones.
+- Preserve chip sizes, chip positions, PCB routing geometry and page layout.
+- Keep mobile paths visible without changing the desktop approved look.
+
+Status: Completed
+
 ## Phase 9 - SEO and Polish
 
 - Add Open Graph image.
