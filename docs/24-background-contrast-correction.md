@@ -1,20 +1,22 @@
 # Background Contrast Correction
 
 ## Objective
-Darken the global PCB background so foreground text remains readable on the public portfolio and the admin analytics dashboard.
 
-## Scope
-This correction intentionally changes only global background/PCB opacity styling and documentation. It does not change chip size, chip position, PCB routing geometry, analytics logic or dashboard data loading.
+Balance the PCB background contrast so portfolio text stays readable without making the circuit paths disappear.
+
+## Decision
+
+The previous correction over-darkened the PCB layer. This pass keeps the background darker than the original bright state, but restores enough trace, via and energy visibility for the PCB concept to remain visible.
 
 ## Changes
-- Replaced the bright readability veil with a dark opacity layer inside the decorative background.
-- Lowered global background radial glow intensity.
-- Reduced grid, trace, via and energy glow intensity.
-- Kept chip dimensions and data-driven placement unchanged.
-- Preserved `prefers-reduced-motion` behavior.
+
+- Keeps chip size, chip position and routing geometry unchanged.
+- Restores PCB path visibility.
+- Keeps the global background slightly darker and less washed out than the original version.
+- Uses a lighter readability veil instead of a fully dark overlay.
+- Keeps energy glow visible but controlled.
+- Keeps mobile background visible without overwhelming text.
 
 ## Files
+
 - `app/globals.css`
-- `docs/01-roadmap.md`
-- `docs/24-background-contrast-correction.md`
-- `README.md`
