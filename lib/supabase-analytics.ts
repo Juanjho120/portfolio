@@ -12,10 +12,12 @@ type PersistAnalyticsResult =
   | { ok: true }
   | { ok: false; reason: "missing_config" | "invalid_table" | "request_failed"; status?: number; error?: string };
 
+const DEFAULT_ANALYTICS_SCHEMA = "portfolio";
 const DEFAULT_ANALYTICS_TABLE = "portfolio_analytics_events";
-const TABLE_NAME_PATTERN = /^[a-zA-Z][a-zA-Z0-9_]*$/;
+const IDENTIFIER_NAME_PATTERN = /^[a-zA-Z][a-zA-Z0-9_]*$/;
 
 function getSupabaseAnalyticsConfig() {
+  const schemaName = process.env.SUPABASE_ANALYTICS_SCHEMA ?? DEFAULT_ANALYTICS_SCHEMA;
   const supabaseUrl = process.env.SUPABASE_URL?.replace(/\/+$/, "");
   const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
   const tableName = process.env.SUPABASE_ANALYTICS_TABLE ?? DEFAULT_ANALYTICS_TABLE;
@@ -24,7 +26,10 @@ function getSupabaseAnalyticsConfig() {
     return { configured: false as const };
   }
 
-  if (!TABLE_NAME_PATTERN.test(tableName)) {
+  if (
+  !IDENTIFIER_NAME_PATTERN.test(schemaName) ||
+  !IDENTIFIER_NAME_PATTERN.test(tableName)
+  ) {
     return { configured: true as const, valid: false as const };
   }
 
@@ -33,6 +38,7 @@ function getSupabaseAnalyticsConfig() {
     valid: true as const,
     supabaseUrl,
     serviceRoleKey,
+    schemaName,
     tableName,
   };
 }
@@ -57,6 +63,7 @@ export async function persistSupabaseAnalyticsEvent(
         apikey: config.serviceRoleKey,
         Authorization: `Bearer ${config.serviceRoleKey}`,
         "Content-Type": "application/json",
+        "Content-Profile": config.schemaName,
         Prefer: "return=minimal",
       },
       body: JSON.stringify(record),

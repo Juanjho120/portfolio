@@ -54,12 +54,14 @@ type AdminAnalyticsResult =
 
 type SearchParamsRecord = Record<string, string | string[] | undefined>;
 
+const DEFAULT_ANALYTICS_SCHEMA = "portfolio";
 const DEFAULT_ANALYTICS_TABLE = "portfolio_analytics_events";
-const TABLE_NAME_PATTERN = /^[a-zA-Z][a-zA-Z0-9_]*$/;
+const IDENTIFIER_NAME_PATTERN = /^[a-zA-Z][a-zA-Z0-9_]*$/;
 const DEFAULT_EVENT_LIMIT = 2000;
 const RECENT_EVENTS_LIMIT = 50;
 
 function getSupabaseAdminAnalyticsConfig() {
+  const schemaName = process.env.SUPABASE_ANALYTICS_SCHEMA ?? DEFAULT_ANALYTICS_SCHEMA;
   const supabaseUrl = process.env.SUPABASE_URL?.replace(/\/+$/, "");
   const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
   const tableName = process.env.SUPABASE_ANALYTICS_TABLE ?? DEFAULT_ANALYTICS_TABLE;
@@ -68,7 +70,10 @@ function getSupabaseAdminAnalyticsConfig() {
     return { configured: false as const };
   }
 
-  if (!TABLE_NAME_PATTERN.test(tableName)) {
+  if (
+  !IDENTIFIER_NAME_PATTERN.test(schemaName) ||
+  !IDENTIFIER_NAME_PATTERN.test(tableName)
+  ) {
     return { configured: true as const, valid: false as const };
   }
 
@@ -77,6 +82,7 @@ function getSupabaseAdminAnalyticsConfig() {
     valid: true as const,
     supabaseUrl,
     serviceRoleKey,
+    schemaName,
     tableName,
   };
 }
@@ -254,6 +260,7 @@ export async function getAdminAnalyticsDashboard(filters: AdminAnalyticsFilters)
       headers: {
         apikey: config.serviceRoleKey,
         Authorization: `Bearer ${config.serviceRoleKey}`,
+        "Accept-Profile": config.schemaName,
       },
       cache: "no-store",
     });
