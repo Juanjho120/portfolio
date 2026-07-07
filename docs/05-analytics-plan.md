@@ -41,13 +41,22 @@ The persistence endpoint is:
 /api/analytics/events
 ```
 
+The endpoint writes analytics events into the Supabase `portfolio-lab` project, under this database object:
+
+```txt
+schema: portfolio
+table: portfolio_analytics_events
+full name: portfolio.portfolio_analytics_events
+```
+
 The endpoint only writes to Supabase when these environment variables are configured:
 
 ```env
 NEXT_PUBLIC_ANALYTICS_PERSISTENCE_ENABLED=true
 SUPABASE_ANALYTICS_ENABLED=true
-SUPABASE_URL=<supabase-project-url>
-SUPABASE_SERVICE_ROLE_KEY=<server-only-service-role-key>
+SUPABASE_URL=
+SUPABASE_SERVICE_ROLE_KEY=
+SUPABASE_ANALYTICS_SCHEMA=portfolio
 SUPABASE_ANALYTICS_TABLE=portfolio_analytics_events
 ```
 
@@ -57,10 +66,22 @@ Status: Implemented and validated in production.
 
 ## Supabase Table
 
+Schema:
+
+```txt
+portfolio
+```
+
 Table name:
 
 ```txt
 portfolio_analytics_events
+```
+
+Full table name:
+
+```txt
+portfolio.portfolio_analytics_events
 ```
 
 SQL setup:
@@ -68,7 +89,9 @@ SQL setup:
 ```sql
 create extension if not exists pgcrypto;
 
-create table if not exists public.portfolio_analytics_events (
+create schema if not exists portfolio;
+
+create table if not exists portfolio.portfolio_analytics_events (
   id uuid primary key default gen_random_uuid(),
   event_name text not null,
   locale text null,
@@ -81,22 +104,29 @@ create table if not exists public.portfolio_analytics_events (
 );
 
 create index if not exists idx_portfolio_analytics_events_created_at
-  on public.portfolio_analytics_events (created_at desc);
+  on portfolio.portfolio_analytics_events (created_at desc);
 
 create index if not exists idx_portfolio_analytics_events_event_name
-  on public.portfolio_analytics_events (event_name);
+  on portfolio.portfolio_analytics_events (event_name);
 
 create index if not exists idx_portfolio_analytics_events_locale
-  on public.portfolio_analytics_events (locale);
+  on portfolio.portfolio_analytics_events (locale);
 
 create index if not exists idx_portfolio_analytics_events_target
-  on public.portfolio_analytics_events (target);
+  on portfolio.portfolio_analytics_events (target);
 
-alter table public.portfolio_analytics_events enable row level security;
+alter table portfolio.portfolio_analytics_events enable row level security;
 
-grant insert on table public.portfolio_analytics_events to service_role;
-grant select on table public.portfolio_analytics_events to service_role;
+revoke all on schema portfolio from anon, authenticated;
+revoke all on all tables in schema portfolio from anon, authenticated;
+
+grant usage on schema portfolio to service_role;
+grant select, insert on table portfolio.portfolio_analytics_events to service_role;
+
+notify pgrst, 'reload schema';
 ```
+
+Supabase must expose the `portfolio` schema through the Data API settings so PostgREST can accept requests using `Content-Profile` and `Accept-Profile`.
 
 ## Project Click Event
 
@@ -121,19 +151,22 @@ Production validation completed after configuring Supabase environment variables
 Validated behavior:
 
 - Custom click events call `/api/analytics/events`.
-- The endpoint persists rows into `portfolio_analytics_events`.
+- The endpoint persists rows into `portfolio.portfolio_analytics_events`.
+- The admin dashboard reads rows from `portfolio.portfolio_analytics_events`.
 - Events include locale and target information.
 - No IP address, exact geolocation, user identity or browser fingerprint is stored.
 
-## Future Admin Dashboard
+## Admin Dashboard Route
 
 Route:
 
-- `/admin/analytics`
+```txt
+/admin/analytics
+```
 
 Metrics:
 
-- Total visits
+- Total events
 - Total project clicks
 - Clicks by project
 - Clicks by locale

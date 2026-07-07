@@ -15,7 +15,7 @@ User interaction
 → Vercel Analytics custom event
 → /api/analytics/events
 → Supabase REST API
-→ portfolio_analytics_events
+→ portfolio.portfolio_analytics_events
 ```
 
 ## Completed Scope
@@ -33,7 +33,7 @@ Phase 7 delivered:
 Production validation confirmed that clicking tracked portfolio interactions creates rows in:
 
 ```txt
-public.portfolio_analytics_events
+portfolio.portfolio_analytics_events
 ```
 
 Validated event types:
@@ -66,10 +66,17 @@ Production persistence depends on these variables in Vercel:
 ```env
 NEXT_PUBLIC_ANALYTICS_PERSISTENCE_ENABLED=true
 SUPABASE_ANALYTICS_ENABLED=true
-SUPABASE_URL=<supabase-project-url>
-SUPABASE_SERVICE_ROLE_KEY=<server-only-service-role-key>
+SUPABASE_URL=
+SUPABASE_SERVICE_ROLE_KEY=
+SUPABASE_ANALYTICS_SCHEMA=portfolio
 SUPABASE_ANALYTICS_TABLE=portfolio_analytics_events
 ```
+
+## Schema Migration Note
+
+The analytics table now lives in the custom `portfolio` schema inside the Supabase `portfolio-lab` project. The previous `public.portfolio_analytics_events` table is no longer the target for production analytics.
+
+The table may start clean because historical analytics rows were not required for the migration.
 
 ## Next Phase
 
@@ -79,7 +86,7 @@ The next formal phase is:
 Phase 8 - Admin Analytics Dashboard
 ```
 
-The dashboard will read from Supabase and show portfolio metrics such as:
+The dashboard reads from Supabase and shows portfolio metrics such as:
 
 - Total events
 - Project clicks

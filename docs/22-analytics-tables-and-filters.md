@@ -1,10 +1,27 @@
 # Phase 8B - Analytics Tables and Filters
 
 ## Objective
+
 Improve the private admin analytics dashboard so persisted Supabase events can be explored without manually querying the database.
 
 ## Scope
+
 This phase keeps `/admin/analytics` read-only and server-rendered. It does not add charts, exports or a new authentication strategy. Those remain candidates for later dashboard polish/hardening phases.
+
+## Data Source
+
+The dashboard reads analytics events from:
+
+```txt
+portfolio.portfolio_analytics_events
+```
+
+The schema is configured separately from the table name:
+
+```env
+SUPABASE_ANALYTICS_SCHEMA=portfolio
+SUPABASE_ANALYTICS_TABLE=portfolio_analytics_events
+```
 
 ## Changes
 
@@ -22,7 +39,7 @@ This phase keeps `/admin/analytics` read-only and server-rendered. It does not a
 
 ## Implementation
 
-The dashboard still fetches a bounded Supabase event sample server-side and then applies dashboard filters in memory. This keeps the implementation simple for the current event volume and avoids exposing any Supabase credentials or query logic to the browser.
+The dashboard fetches a bounded Supabase event sample server-side and then applies dashboard filters in memory. This keeps the implementation simple for the current event volume and avoids exposing any Supabase credentials or query logic to the browser.
 
 Relevant files:
 
@@ -52,4 +69,6 @@ Production smoke test after deploy:
 
 ## Notes
 
-The dashboard remains read-only. Any future admin route should continue to avoid exposing `SUPABASE_SERVICE_ROLE_KEY` or any server-only key to client components.
+The dashboard remains read-only.
+
+Any future admin route should continue to avoid exposing `SUPABASE_SERVICE_ROLE_KEY` or any server-only key to client components.

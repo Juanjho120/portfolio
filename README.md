@@ -126,7 +126,7 @@ External Contact Click
 External Profile Click
 ```
 
-Each event includes the current locale and a target identifier. Supabase persistence is handled by `/api/analytics/events`, writes to `portfolio_analytics_events`, and was validated in production after configuring Supabase environment variables in Vercel.
+Each event includes the current locale and a target identifier. Supabase persistence is handled by `/api/analytics/events`, writes to `portfolio.portfolio_analytics_events` inside the Supabase `portfolio-lab` project, and was validated in production after configuring Supabase environment variables in Vercel.
 
 ## Admin Analytics Dashboard
 
@@ -138,7 +138,7 @@ Admin dashboard route:
 /admin/analytics
 ```
 
-It reads custom analytics events from Supabase server-side, supports filters for date range, event type, locale, target and search, and is protected with hardened Basic Auth middleware through environment variables.
+It reads custom analytics events from `portfolio.portfolio_analytics_events` in Supabase server-side, supports filters for date range, event type, locale, target and search, and is protected with hardened Basic Auth middleware through environment variables.
 
 Admin dashboard documentation:
 
@@ -218,3 +218,4 @@ Recommended reading order:
 24. `docs/23-admin-access-hardening.md`
 25. `docs/24-background-contrast-correction.md`
 26. `docs/25-mobile-background-color-fix.md`
+27. `docs/26-supabase-analytics-schema-migration.md`

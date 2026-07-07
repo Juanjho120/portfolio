@@ -2,9 +2,7 @@
 
 ## Objective
 
-Add the first private admin dashboard page for reviewing custom portfolio analytics stored in Supabase.
-
-The goal of this phase is to create a useful read-only foundation without adding a separate backend or third-party dashboard dependency.
+Add the first private admin dashboard page for reviewing custom portfolio analytics stored in Supabase. The goal of this phase is to create a useful read-only foundation without adding a separate backend or third-party dashboard dependency.
 
 ## Route
 
@@ -17,7 +15,7 @@ The goal of this phase is to create a useful read-only foundation without adding
 The dashboard reads from the same Supabase table used by Phase 7C:
 
 ```txt
-portfolio_analytics_events
+portfolio.portfolio_analytics_events
 ```
 
 The route reads data server-side using:
@@ -25,7 +23,15 @@ The route reads data server-side using:
 ```txt
 SUPABASE_URL
 SUPABASE_SERVICE_ROLE_KEY
+SUPABASE_ANALYTICS_SCHEMA
 SUPABASE_ANALYTICS_TABLE
+```
+
+Current expected values:
+
+```env
+SUPABASE_ANALYTICS_SCHEMA=portfolio
+SUPABASE_ANALYTICS_TABLE=portfolio_analytics_events
 ```
 
 The service role key remains server-only and is never exposed to the browser.
@@ -43,7 +49,7 @@ The first version shows:
 - Top project targets.
 - Latest 25 events.
 
-The dashboard currently reads the latest 500 events and aggregates them in the Next.js server component.
+The dashboard currently reads a bounded event sample and aggregates it in the Next.js server component.
 
 ## Access Protection
 
@@ -53,8 +59,8 @@ Environment variables:
 
 ```env
 ADMIN_ANALYTICS_BASIC_AUTH_ENABLED=true
-ADMIN_ANALYTICS_BASIC_AUTH_USER=<admin-user>
-ADMIN_ANALYTICS_BASIC_AUTH_PASSWORD=<strong-password>
+ADMIN_ANALYTICS_BASIC_AUTH_USER=
+ADMIN_ANALYTICS_BASIC_AUTH_PASSWORD=
 ```
 
 For local development, `ADMIN_ANALYTICS_BASIC_AUTH_ENABLED=false` can be used to avoid the browser auth prompt.
@@ -94,8 +100,10 @@ http://localhost:3000/admin/analytics
 Production validation:
 
 1. Configure the existing Supabase analytics variables in Vercel.
-2. Configure Basic Auth variables in Vercel.
-3. Redeploy.
-4. Open `/admin/analytics`.
-5. Confirm the browser asks for credentials when Basic Auth is enabled.
-6. Confirm the dashboard loads Supabase analytics metrics.
+2. Configure `SUPABASE_ANALYTICS_SCHEMA=portfolio`.
+3. Configure `SUPABASE_ANALYTICS_TABLE=portfolio_analytics_events`.
+4. Configure Basic Auth variables in Vercel.
+5. Redeploy.
+6. Open `/admin/analytics`.
+7. Confirm the browser asks for credentials when Basic Auth is enabled.
+8. Confirm the dashboard loads Supabase analytics metrics from `portfolio.portfolio_analytics_events`.
