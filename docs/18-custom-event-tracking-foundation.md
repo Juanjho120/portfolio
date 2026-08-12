@@ -12,7 +12,6 @@ Included:
 
 - Add a reusable `TrackedLink` client component.
 - Track project demo clicks from project image links and live demo buttons.
-- Track project GitHub clicks when a GitHub URL exists.
 - Track CV download clicks from the hero and footer.
 - Track email/contact clicks from the hero and footer.
 - Track GitHub profile clicks from the footer.
@@ -52,7 +51,6 @@ The component intentionally catches tracking errors so analytics can never block
 
 ```txt
 Project Demo Click
-Project GitHub Click
 CV Download Click
 External Contact Click
 External Profile Click
@@ -102,7 +100,6 @@ After deploying, validate these interactions:
 ```txt
 - Project image click
 - Project Live Demo button click
-- Project GitHub button click when available
 - Hero CV click
 - Footer CV click
 - Hero email/contact click

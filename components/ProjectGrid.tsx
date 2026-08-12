@@ -13,7 +13,6 @@ type ProjectGridProps = {
   locale: Locale;
   cardLabels: {
     liveDemo: string;
-    github: string;
     openDemoAriaPrefix: string;
     status: Record<ProjectStatus, string>;
   };

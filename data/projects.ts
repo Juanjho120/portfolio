@@ -15,7 +15,6 @@ export type Project = {
   title: string;
   stack: string[];
   liveDemoUrl: string;
-  githubUrl?: string;
   status: ProjectStatus;
   imageSrc: string;
 };
@@ -46,7 +45,6 @@ export const projects: Project[] = [
       "Tilopay",
     ],
     liveDemoUrl: "https://trp-booking.juantzun.dev/",
-    githubUrl: "https://github.com/Juanjho120/trp-booking",
     status: "inDevelopment",
     imageSrc: "/images/projects/trp-booking.png",
   },

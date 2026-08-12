@@ -120,7 +120,6 @@ Currently tracked custom interactions:
 
 ```txt
 Project Demo Click
-Project GitHub Click
 CV Download Click
 External Contact Click
 External Profile Click
@@ -221,3 +220,4 @@ Recommended reading order:
 26. `docs/25-mobile-background-color-fix.md`
 27. `docs/26-supabase-analytics-schema-migration.md`
 28. `docs/27-trp-booking-project-card.md`
+29. `docs/28-project-card-action-alignment.md`

@@ -7,7 +7,6 @@ import type { Locale } from "@/i18n/config";
 
 type ProjectCardLabels = {
   liveDemo: string;
-  github: string;
   openDemoAriaPrefix: string;
   status: Record<ProjectStatus, string>;
 };
@@ -110,7 +109,7 @@ export function ProjectCard({ project, projectText, labels, index, locale }: Pro
           ))}
         </ul>
 
-        <div className="mt-6 flex flex-wrap gap-3 pt-2">
+        <div className="mt-auto flex flex-wrap gap-3 pt-6">
           <TrackedLink
             href={project.liveDemoUrl}
             target="_blank"
@@ -121,19 +120,6 @@ export function ProjectCard({ project, projectText, labels, index, locale }: Pro
           >
             {labels.liveDemo}
           </TrackedLink>
-
-          {project.githubUrl ? (
-            <TrackedLink
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-slate-950 hover:text-slate-950 dark:border-slate-700 dark:text-slate-200 dark:hover:border-white dark:hover:text-white"
-              trackingEvent="Project GitHub Click"
-              trackingProperties={{ locale, target: project.slug }}
-            >
-              {labels.github}
-            </TrackedLink>
-          ) : null}
         </div>
       </div>
     </article>

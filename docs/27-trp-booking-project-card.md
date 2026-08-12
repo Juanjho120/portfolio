@@ -10,6 +10,8 @@ Add TRP Booking to the portfolio project grid as a real product card positioned 
 https://github.com/Juanjho120/trp-booking
 ```
 
+The repository remains private from the portfolio UI perspective. The project card links only to the live demo because the portfolio project repositories are not intended to be exposed as card actions.
+
 ## Live Demo
 
 ```txt
@@ -52,6 +54,16 @@ Tailwind CSS
 Vercel
 Tilopay
 ```
+
+## Card Actions
+
+Visible project card actions are intentionally limited to:
+
+```txt
+Live Demo
+```
+
+GitHub buttons are not rendered for project cards because portfolio projects are treated as private implementation work.
 
 ## Files Updated
 

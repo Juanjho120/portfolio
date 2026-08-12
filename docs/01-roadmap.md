@@ -161,9 +161,10 @@ Status: Completed
 
 ## Phase 7B - Custom Event Tracking Foundation
 
-- Track project card clicks.
+- Track project card image clicks.
+- Track project live demo button clicks.
 - Track CV download clicks.
-- Track external profile clicks.
+- Track external profile/contact clicks.
 - Include locale and event source in each custom event.
 
 Status: Completed
@@ -254,11 +255,21 @@ Status: Completed
 
 - Add TRP Booking as a portfolio project card immediately after TAMIAS.
 - Link the live demo to `https://trp-booking.juantzun.dev/`.
-- Link the GitHub repository to `https://github.com/Juanjho120/trp-booking`.
+- Keep project repositories private by omitting GitHub buttons from project cards.
 - Add bilingual card copy and highlights.
 - Add a representative project visual.
 - Add technology badges for the TRP Booking stack.
 - Update the projects catalog and README documentation list.
+
+Status: Completed
+
+## Project Card Action Alignment
+
+- Keep every project card as a full-height flex column.
+- Push the `Live Demo` action row to the bottom of each card.
+- Remove project-level GitHub buttons from the card UI.
+- Remove the TRP Booking GitHub URL from project metadata because portfolio project repositories are private.
+- Keep project image clicks and live demo button clicks tracked as `Project Demo Click`.
 
 Status: Completed
 

@@ -19,7 +19,6 @@ Use Vercel custom events for lightweight interaction tracking and Supabase persi
 Tracked custom events:
 
 - `Project Demo Click`
-- `Project GitHub Click`
 - `CV Download Click`
 - `External Contact Click`
 - `External Profile Click`
