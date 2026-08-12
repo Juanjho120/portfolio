@@ -32,8 +32,6 @@ export type PcbNode = {
   r?: number;
 };
 
-const animationCycleSeconds = 14;
-
 export const pcbChips: PcbChip[] = [
   {
     id: "java",

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { TrackedLink } from "@/components/TrackedLink";
 import { getTechIcon } from "@/data/tech-icons";
 import type { Project, ProjectStatus } from "@/data/projects";
@@ -45,12 +47,13 @@ export function ProjectCard({ project, projectText, labels, index, locale }: Pro
         trackingEvent="Project Demo Click"
         trackingProperties={{ locale, target: `${project.slug}:image` }}
       >
-        <div className="aspect-[16/10] overflow-hidden">
-          <img
+        <div className="relative aspect-[16/10] overflow-hidden">
+          <Image
             src={project.imageSrc}
             alt={projectText.imageAlt}
-            className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-            loading="lazy"
+            fill
+            sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
+            className="object-cover transition duration-500 group-hover:scale-105"
           />
         </div>
 
@@ -83,12 +86,13 @@ export function ProjectCard({ project, projectText, labels, index, locale }: Pro
                 className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-2.5 py-1 text-xs font-semibold text-slate-700 shadow-sm shadow-slate-950/5 transition hover:border-slate-300 hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-800/80 dark:text-slate-200 dark:shadow-black/10 dark:hover:border-slate-600 dark:hover:bg-slate-800"
               >
                 {techIcon ? (
-                  <img
+                  <Image
                     src={techIcon.src}
                     alt=""
                     aria-hidden="true"
+                    width={14}
+                    height={14}
                     className="h-3.5 w-3.5 shrink-0 rounded-[3px]"
-                    loading="lazy"
                   />
                 ) : null}
                 <span>{tech}</span>
