@@ -1,0 +1,42 @@
+<svg width="1200" height="750" viewBox="0 0 1200 750" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<title id="title">TRP Booking project preview</title>
+<desc id="desc">Representative visual card for the TRP Booking direct reservation website.</desc>
+<rect width="1200" height="750" fill="#020617"/>
+<circle cx="220" cy="116" r="260" fill="#0ea5e9" opacity="0.18"/>
+<circle cx="1010" cy="650" r="330" fill="#14b8a6" opacity="0.2"/>
+<circle cx="700" cy="80" r="280" fill="#f59e0b" opacity="0.12"/>
+<rect x="70" y="64" width="1060" height="622" rx="36" fill="rgba(15,23,42,0.78)" stroke="rgba(148,163,184,0.24)"/>
+<rect x="102" y="104" width="996" height="72" rx="22" fill="rgba(255,255,255,0.07)"/>
+<circle cx="140" cy="140" r="10" fill="#38bdf8"/>
+<circle cx="172" cy="140" r="10" fill="#2dd4bf"/>
+<circle cx="204" cy="140" r="10" fill="#fbbf24"/>
+<text x="246" y="148" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="22" font-weight="700">trp-booking.juantzun.dev / direct booking</text>
+
+<rect x="102" y="214" width="446" height="330" rx="28" fill="rgba(255,255,255,0.08)" stroke="rgba(148,163,184,0.18)"/>
+<text x="138" y="274" fill="#f8fafc" font-family="Arial, sans-serif" font-size="50" font-weight="800">TRP Booking</text>
+<text x="140" y="326" fill="#7dd3fc" font-family="Arial, sans-serif" font-size="24" font-weight="700">Direct stays · Payments · iCal sync</text>
+<rect x="140" y="362" width="342" height="12" rx="6" fill="#38bdf8" opacity="0.72"/>
+<rect x="140" y="388" width="282" height="12" rx="6" fill="#2dd4bf" opacity="0.62"/>
+<rect x="140" y="434" width="128" height="44" rx="22" fill="rgba(14,165,233,0.2)" stroke="rgba(125,211,252,0.32)"/>
+<text x="166" y="462" fill="#e0f2fe" font-family="Arial, sans-serif" font-size="17" font-weight="800">Book</text>
+<rect x="286" y="434" width="142" height="44" rx="22" fill="rgba(45,212,191,0.18)" stroke="rgba(94,234,212,0.32)"/>
+<text x="312" y="462" fill="#ccfbf1" font-family="Arial, sans-serif" font-size="17" font-weight="800">Pay</text>
+
+<rect x="608" y="214" width="450" height="330" rx="28" fill="rgba(2,6,23,0.58)" stroke="rgba(148,163,184,0.2)"/>
+<rect x="646" y="252" width="178" height="122" rx="24" fill="rgba(14,165,233,0.16)" stroke="rgba(125,211,252,0.28)"/>
+<rect x="842" y="252" width="178" height="122" rx="24" fill="rgba(45,212,191,0.16)" stroke="rgba(94,234,212,0.28)"/>
+<text x="674" y="302" fill="#f8fafc" font-family="Arial, sans-serif" font-size="22" font-weight="800">Calendar</text>
+<text x="875" y="302" fill="#f8fafc" font-family="Arial, sans-serif" font-size="22" font-weight="800">Payment</text>
+<path d="M682 340h104M884 340h92" stroke="#7dd3fc" stroke-width="10" stroke-linecap="round"/>
+<path d="M706 324l28 28 56-64" stroke="#2dd4bf" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M868 325h128" stroke="#fbbf24" stroke-width="10" stroke-linecap="round"/>
+<path d="M690 426 L754 426 L792 388 L866 388 L904 426 L976 426" stroke="#38bdf8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="690" cy="426" r="9" fill="#38bdf8"/>
+<circle cx="792" cy="388" r="9" fill="#2dd4bf"/>
+<circle cx="904" cy="426" r="9" fill="#fbbf24"/>
+<circle cx="976" cy="426" r="9" fill="#38bdf8"/>
+<text x="650" y="486" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="22" font-weight="700">Airbnb iCal · Bilingual email · Admin</text>
+
+<rect x="76" y="590" width="1048" height="2" fill="rgba(148,163,184,0.18)"/>
+<text x="76" y="638" fill="#94a3b8" font-family="Arial, sans-serif" font-size="22" font-weight="700">Next.js · Prisma · Supabase · Auth.js · Resend · Cloudinary · Vercel</text>
+</svg>

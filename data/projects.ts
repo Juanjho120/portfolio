@@ -2,6 +2,7 @@ export type ProjectStatus = "active" | "inDevelopment" | "planned";
 
 export type ProjectSlug =
   | "tamias"
+  | "trpBooking"
   | "knowledgehub"
   | "elections"
   | "devflow"
@@ -27,6 +28,27 @@ export const projects: Project[] = [
     liveDemoUrl: "https://tamias.juantzun.dev",
     status: "inDevelopment",
     imageSrc: "/images/projects/tamias.png",
+  },
+  {
+    slug: "trpBooking",
+    title: "TRP Booking",
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "React",
+      "Prisma",
+      "Supabase",
+      "Auth.js",
+      "Cloudinary",
+      "Resend",
+      "Tailwind CSS",
+      "Vercel",
+      "Tilopay",
+    ],
+    liveDemoUrl: "https://trp-booking.juantzun.dev/",
+    githubUrl: "https://github.com/Juanjho120/trp-booking",
+    status: "inDevelopment",
+    imageSrc: "/images/projects/trp-booking.svg",
   },
   {
     slug: "knowledgehub",

@@ -49,6 +49,44 @@ Stack:
 - OpenAI
 - Docker
 
+## TRP Booking
+
+URL:
+
+- https://trp-booking.juantzun.dev/
+
+Repository:
+
+- https://github.com/Juanjho120/trp-booking
+
+Description:
+
+Direct booking website and booking engine for Tu Refugio Perfecto, focused on the public guest reservation flow and the minimum private admin operations required for direct reservations.
+
+Main features:
+
+- Public lodging pages
+- Availability checks
+- Direct reservations
+- Tilopay payment flow
+- Airbnb iCal synchronization
+- Bilingual transactional emails
+- Minimal admin area for booking operations
+
+Stack:
+
+- Next.js
+- TypeScript
+- React
+- Prisma
+- Supabase
+- Auth.js
+- Cloudinary
+- Resend
+- Tailwind CSS
+- Vercel
+- Tilopay
+
 ## KnowledgeHub AI
 
 URL:
@@ -211,3 +249,11 @@ Main modules:
 - Reports
 - Audit
 - AI assistant
+
+Stack:
+
+- Angular
+- Spring Boot
+- PostgreSQL
+- Docker
+- OpenAI

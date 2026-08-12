@@ -72,6 +72,15 @@
       ],
       "imageAlt": "Vista representativa del dashboard de TAMIAS."
     },
+    "trpBooking": {
+      "description": "Sitio de reservas directas para Tu Refugio Perfecto: páginas de alojamientos, disponibilidad, reservaciones directas, pagos con Tilopay, sincronización iCal con Airbnb, correos transaccionales bilingües y administración mínima.",
+      "highlights": [
+        "Reservas directas",
+        "Pagos Tilopay",
+        "Sincronización iCal Airbnb"
+      ],
+      "imageAlt": "Vista representativa del motor de reservas de TRP Booking."
+    },
     "knowledgehub": {
       "description": "Sistema documental con IA, permisos, búsqueda semántica, RAG y chatbot sobre documentos empresariales.",
       "highlights": [

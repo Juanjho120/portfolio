@@ -151,6 +151,7 @@ docs/23-admin-access-hardening.md
 ## Initial Projects
 
 - TAMIAS
+- TRP Booking
 - KnowledgeHub AI
 - Election Analytics Platform
 - DevFlow
@@ -219,3 +220,4 @@ Recommended reading order:
 25. `docs/24-background-contrast-correction.md`
 26. `docs/25-mobile-background-color-fix.md`
 27. `docs/26-supabase-analytics-schema-migration.md`
+28. `docs/27-trp-booking-project-card.md`

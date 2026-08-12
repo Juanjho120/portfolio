@@ -211,7 +211,6 @@ Status: Completed
 
 Status: Completed
 
-
 ## Phase 8B - Analytics Tables and Filters
 
 - Add dashboard filters for date range, event type, locale, target and free-text search.
@@ -221,7 +220,6 @@ Status: Completed
 - Keep Supabase service role usage server-only.
 
 Status: Completed
-
 
 ## Phase 8C - Admin Access Hardening
 
@@ -233,7 +231,6 @@ Status: Completed
 - Mark the admin analytics dashboard phase as completed.
 
 Status: Completed
-
 
 ## Background Contrast Correction
 
@@ -250,6 +247,18 @@ Status: Completed
 - Remove the mobile-only dark readability overlay that made the portfolio look almost black on phones.
 - Preserve chip sizes, chip positions, PCB routing geometry and page layout.
 - Keep mobile paths visible without changing the desktop approved look.
+
+Status: Completed
+
+## Project Catalog Update - TRP Booking Card
+
+- Add TRP Booking as a portfolio project card immediately after TAMIAS.
+- Link the live demo to `https://trp-booking.juantzun.dev/`.
+- Link the GitHub repository to `https://github.com/Juanjho120/trp-booking`.
+- Add bilingual card copy and highlights.
+- Add a representative project visual.
+- Add technology badges for the TRP Booking stack.
+- Update the projects catalog and README documentation list.
 
 Status: Completed
 

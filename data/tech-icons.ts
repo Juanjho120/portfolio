@@ -68,6 +68,46 @@ export const techIcons: Record<string, TechIcon> = {
     src: "/images/tech/mcp.svg",
     label: "MCP",
   },
+  "Next.js": {
+    src: "/images/tech/nextjs.svg",
+    label: "Next.js",
+  },
+  TypeScript: {
+    src: "/images/tech/typescript.svg",
+    label: "TypeScript",
+  },
+  Prisma: {
+    src: "/images/tech/prisma.svg",
+    label: "Prisma",
+  },
+  Supabase: {
+    src: "/images/tech/supabase.svg",
+    label: "Supabase",
+  },
+  "Auth.js": {
+    src: "/images/tech/authjs.svg",
+    label: "Auth.js",
+  },
+  Cloudinary: {
+    src: "/images/tech/cloudinary.svg",
+    label: "Cloudinary",
+  },
+  Resend: {
+    src: "/images/tech/resend.svg",
+    label: "Resend",
+  },
+  "Tailwind CSS": {
+    src: "/images/tech/tailwind-css.svg",
+    label: "Tailwind CSS",
+  },
+  Vercel: {
+    src: "/images/tech/vercel.svg",
+    label: "Vercel",
+  },
+  Tilopay: {
+    src: "/images/tech/tilopay.svg",
+    label: "Tilopay",
+  },
 };
 
 export function getTechIcon(tech: string): TechIcon | undefined {
