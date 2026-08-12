@@ -48,7 +48,7 @@ export const projects: Project[] = [
     liveDemoUrl: "https://trp-booking.juantzun.dev/",
     githubUrl: "https://github.com/Juanjho120/trp-booking",
     status: "inDevelopment",
-    imageSrc: "/images/projects/trp-booking.svg",
+    imageSrc: "/images/projects/trp-booking.png",
   },
   {
     slug: "knowledgehub",

@@ -60,7 +60,7 @@ data/projects.ts
 data/tech-icons.ts
 i18n/messages/en.json
 i18n/messages/es.json
-public/images/projects/trp-booking.svg
+public/images/projects/trp-booking.png
 public/images/tech/nextjs.svg
 public/images/tech/typescript.svg
 public/images/tech/prisma.svg
